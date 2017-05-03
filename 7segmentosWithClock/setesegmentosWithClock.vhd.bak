@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY setesegmentosWithClock IS
+	PORT(	habilita:	IN BIT;
+			abcdefg:		OUT BIT_vector(6 downto 0));
+END setesegmentosWithClock;
+
+ARCHITECTURE behavior1 OF setesegmentosWithClock IS
+
+	COMPONENT sete_segmentos IS
+					PORT(	ABCD:			IN BIT_vector(3 downto 0);
+							habilita:	IN BIT;
+							abcdefg:		OUT BIT_vector(6 downto 0)); END COMPONENT;
+
+	FOR ALL: sete_segmentos USE ENTITY work.sete_segmentos(structural);
+
+	SIGNAL clk <= 0: BIT, zeroANove BIT_vector(3 downto 0)
+	
+	PROCESS(habilita,abcdefg)
+	BEGIN
+	
+	IF(clk = '0') THEN
+		clk <= '1';
+	ELSE IF(clk = '1') THEN
+		clk <= '0';
+	END IF;
+		
+	
+		IF rising_edge(clk) THEN
+			for zeroANove in 0 to 9 loop
+				sete_segmentos(zeroANove,habilita,abcdefg);
+			end loop;
+		END IF;
+	END PROCESS;
+
+END behavior1;

@@ -1,0 +1,83 @@
+# Reading C:/altera/14.1/modelsim_ase/tcl/vsim/pref.tcl
+# do 7segmentosWithClock_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
+# vmap -modelsim_quiet work gate_work 
+# Copying C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {7segmentosWithClock_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 08:53:56 on May 03,2017
+# vcom -reportprogress 300 -93 -work work 7segmentosWithClock_6_1200mv_85c_slow.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneiv_atom_pack
+# -- Loading package cycloneiv_components
+# -- Compiling entity setesegmentosWithClock
+# -- Compiling architecture structure of setesegmentosWithClock
+# End time: 08:53:56 on May 03,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.setesegmentoswithclock(structure)
+# vsim -gui "+altera" -l msim_transcript -do "7segmentosWithClock_run_msim_gate_vhdl.do" 
+# Start time: 08:55:00 on May 03,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneiv.cycloneiv_atom_pack(body)
+# Loading cycloneiv.cycloneiv_components
+# Loading work.setesegmentoswithclock(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiv.cycloneiv_io_obuf(arch)
+# Loading cycloneiv.cycloneiv_io_ibuf(arch)
+# Loading cycloneiv.cycloneiv_clkctrl(vital_clkctrl)
+# Loading cycloneiv.cycloneiv_ena_reg(behave)
+# Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+add wave -position end  sim:/setesegmentoswithclock/clock
+add wave -position end  sim:/setesegmentoswithclock/habilita
+add wave -position end  sim:/setesegmentoswithclock/abcdefg
+force -freeze sim:/setesegmentoswithclock/habilita 1 0
+force -freeze sim:/setesegmentoswithclock/clock 1 0, 0 {50 ps} -r 100
+run
+add wave -position end  sim:/setesegmentoswithclock/zeroANove
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 08:57:33 on May 03,2017, Elapsed time: 0:02:33
+# Errors: 0, Warnings: 0
