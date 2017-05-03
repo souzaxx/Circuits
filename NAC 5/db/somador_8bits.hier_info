@@ -1,0 +1,895 @@
+|somador_8bits
+x[0] => somador4bits:C1.x[0]
+x[1] => somador4bits:C1.x[1]
+x[2] => somador4bits:C1.x[2]
+x[3] => somador4bits:C1.x[3]
+x[4] => somador_4b_so_somadores:C2.x[0]
+x[5] => somador_4b_so_somadores:C2.x[1]
+x[6] => somador_4b_so_somadores:C2.x[2]
+x[7] => somador_4b_so_somadores:C2.x[3]
+y[0] => somador4bits:C1.y[0]
+y[1] => somador4bits:C1.y[1]
+y[2] => somador4bits:C1.y[2]
+y[3] => somador4bits:C1.y[3]
+y[4] => somador_4b_so_somadores:C2.y[0]
+y[5] => somador_4b_so_somadores:C2.y[1]
+y[6] => somador_4b_so_somadores:C2.y[2]
+y[7] => somador_4b_so_somadores:C2.y[3]
+habilita => somador4bits:C1.habilita
+habilita => somador_4b_so_somadores:C2.habilita
+S[0] <= somador4bits:C1.S[0]
+S[1] <= somador4bits:C1.S[1]
+S[2] <= somador4bits:C1.S[2]
+S[3] <= somador4bits:C1.S[3]
+S[4] <= somador_4b_so_somadores:C2.S[0]
+S[5] <= somador_4b_so_somadores:C2.S[1]
+S[6] <= somador_4b_so_somadores:C2.S[2]
+S[7] <= somador_4b_so_somadores:C2.S[3]
+cout <= somador_4b_so_somadores:C2.cout
+
+
+|somador_8bits|Somador4bits:C1
+x[0] => meio_somador:C1.x
+x[1] => somador_1bit:C2.x
+x[2] => somador_1bit:C3.x
+x[3] => somador_1bit:C4.x
+y[0] => meio_somador:C1.y
+y[1] => somador_1bit:C2.y
+y[2] => somador_1bit:C3.y
+y[3] => somador_1bit:C4.y
+habilita => meio_somador:C1.habilita
+habilita => somador_1bit:C2.habilita
+habilita => somador_1bit:C3.habilita
+habilita => somador_1bit:C4.habilita
+S[0] <= meio_somador:C1.S
+S[1] <= somador_1bit:C2.S
+S[2] <= somador_1bit:C3.S
+S[3] <= somador_1bit:C4.S
+cout <= somador_1bit:C4.cout
+
+
+|somador_8bits|Somador4bits:C1|meio_somador:C1
+habilita => and_2:c6.a
+habilita => and_3:c7.c
+x => not_1:c1.a
+x => and_2:c4.a
+x => and_3:c7.a
+y => not_1:c2.a
+y => and_2:c3.b
+y => and_3:c7.b
+cout <= and_3:c7.output
+S <= and_2:c6.output
+
+
+|somador_8bits|Somador4bits:C1|meio_somador:C1|not_1:c1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|meio_somador:C1|not_1:c2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|meio_somador:C1|and_2:c3
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|meio_somador:C1|and_2:c4
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|meio_somador:C1|or_2:c5
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|meio_somador:C1|and_2:c6
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|meio_somador:C1|and_3:c7
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2
+habilita => and_2:c9.a
+habilita => and_2:C14.a
+Cin => not_1:c3.a
+Cin => and_3:c6.c
+Cin => and_3:c7.c
+Cin => and_2:C10.b
+Cin => and_2:C12.b
+x => not_1:c1.a
+x => and_3:c5.a
+x => and_3:c7.a
+x => and_2:C11.a
+x => and_2:C12.a
+y => not_1:c2.a
+y => and_3:c4.b
+y => and_3:c7.b
+y => and_2:C10.a
+y => and_2:C11.b
+cout <= and_2:C14.output
+S <= and_2:c9.output
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|not_1:c1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|not_1:c2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|not_1:c3
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|and_3:c4
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|and_3:c5
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|and_3:c6
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|and_3:c7
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|or_4:c8
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|and_2:c9
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|and_2:C10
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|and_2:C11
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|and_2:C12
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|or_3:C13
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C2|and_2:C14
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3
+habilita => and_2:c9.a
+habilita => and_2:C14.a
+Cin => not_1:c3.a
+Cin => and_3:c6.c
+Cin => and_3:c7.c
+Cin => and_2:C10.b
+Cin => and_2:C12.b
+x => not_1:c1.a
+x => and_3:c5.a
+x => and_3:c7.a
+x => and_2:C11.a
+x => and_2:C12.a
+y => not_1:c2.a
+y => and_3:c4.b
+y => and_3:c7.b
+y => and_2:C10.a
+y => and_2:C11.b
+cout <= and_2:C14.output
+S <= and_2:c9.output
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|not_1:c1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|not_1:c2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|not_1:c3
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|and_3:c4
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|and_3:c5
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|and_3:c6
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|and_3:c7
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|or_4:c8
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|and_2:c9
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|and_2:C10
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|and_2:C11
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|and_2:C12
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|or_3:C13
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C3|and_2:C14
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4
+habilita => and_2:c9.a
+habilita => and_2:C14.a
+Cin => not_1:c3.a
+Cin => and_3:c6.c
+Cin => and_3:c7.c
+Cin => and_2:C10.b
+Cin => and_2:C12.b
+x => not_1:c1.a
+x => and_3:c5.a
+x => and_3:c7.a
+x => and_2:C11.a
+x => and_2:C12.a
+y => not_1:c2.a
+y => and_3:c4.b
+y => and_3:c7.b
+y => and_2:C10.a
+y => and_2:C11.b
+cout <= and_2:C14.output
+S <= and_2:c9.output
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|not_1:c1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|not_1:c2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|not_1:c3
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|and_3:c4
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|and_3:c5
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|and_3:c6
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|and_3:c7
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|or_4:c8
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|and_2:c9
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|and_2:C10
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|and_2:C11
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|and_2:C12
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|or_3:C13
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|Somador4bits:C1|somador_1bit:C4|and_2:C14
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2
+x[0] => somador_1bit:C1.x
+x[1] => somador_1bit:C2.x
+x[2] => somador_1bit:C3.x
+x[3] => somador_1bit:C4.x
+y[0] => somador_1bit:C1.y
+y[1] => somador_1bit:C2.y
+y[2] => somador_1bit:C3.y
+y[3] => somador_1bit:C4.y
+habilita => somador_1bit:C1.habilita
+habilita => somador_1bit:C2.habilita
+habilita => somador_1bit:C3.habilita
+habilita => somador_1bit:C4.habilita
+Cin => somador_1bit:C1.Cin
+S[0] <= somador_1bit:C1.S
+S[1] <= somador_1bit:C2.S
+S[2] <= somador_1bit:C3.S
+S[3] <= somador_1bit:C4.S
+cout <= somador_1bit:C4.cout
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1
+habilita => and_2:c9.a
+habilita => and_2:C14.a
+Cin => not_1:c3.a
+Cin => and_3:c6.c
+Cin => and_3:c7.c
+Cin => and_2:C10.b
+Cin => and_2:C12.b
+x => not_1:c1.a
+x => and_3:c5.a
+x => and_3:c7.a
+x => and_2:C11.a
+x => and_2:C12.a
+y => not_1:c2.a
+y => and_3:c4.b
+y => and_3:c7.b
+y => and_2:C10.a
+y => and_2:C11.b
+cout <= and_2:C14.output
+S <= and_2:c9.output
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|not_1:c1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|not_1:c2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|not_1:c3
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|and_3:c4
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|and_3:c5
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|and_3:c6
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|and_3:c7
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|or_4:c8
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|and_2:c9
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|and_2:C10
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|and_2:C11
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|and_2:C12
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|or_3:C13
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C1|and_2:C14
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2
+habilita => and_2:c9.a
+habilita => and_2:C14.a
+Cin => not_1:c3.a
+Cin => and_3:c6.c
+Cin => and_3:c7.c
+Cin => and_2:C10.b
+Cin => and_2:C12.b
+x => not_1:c1.a
+x => and_3:c5.a
+x => and_3:c7.a
+x => and_2:C11.a
+x => and_2:C12.a
+y => not_1:c2.a
+y => and_3:c4.b
+y => and_3:c7.b
+y => and_2:C10.a
+y => and_2:C11.b
+cout <= and_2:C14.output
+S <= and_2:c9.output
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|not_1:c1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|not_1:c2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|not_1:c3
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|and_3:c4
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|and_3:c5
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|and_3:c6
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|and_3:c7
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|or_4:c8
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|and_2:c9
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|and_2:C10
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|and_2:C11
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|and_2:C12
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|or_3:C13
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C2|and_2:C14
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3
+habilita => and_2:c9.a
+habilita => and_2:C14.a
+Cin => not_1:c3.a
+Cin => and_3:c6.c
+Cin => and_3:c7.c
+Cin => and_2:C10.b
+Cin => and_2:C12.b
+x => not_1:c1.a
+x => and_3:c5.a
+x => and_3:c7.a
+x => and_2:C11.a
+x => and_2:C12.a
+y => not_1:c2.a
+y => and_3:c4.b
+y => and_3:c7.b
+y => and_2:C10.a
+y => and_2:C11.b
+cout <= and_2:C14.output
+S <= and_2:c9.output
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|not_1:c1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|not_1:c2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|not_1:c3
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|and_3:c4
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|and_3:c5
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|and_3:c6
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|and_3:c7
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|or_4:c8
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|and_2:c9
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|and_2:C10
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|and_2:C11
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|and_2:C12
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|or_3:C13
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C3|and_2:C14
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4
+habilita => and_2:c9.a
+habilita => and_2:C14.a
+Cin => not_1:c3.a
+Cin => and_3:c6.c
+Cin => and_3:c7.c
+Cin => and_2:C10.b
+Cin => and_2:C12.b
+x => not_1:c1.a
+x => and_3:c5.a
+x => and_3:c7.a
+x => and_2:C11.a
+x => and_2:C12.a
+y => not_1:c2.a
+y => and_3:c4.b
+y => and_3:c7.b
+y => and_2:C10.a
+y => and_2:C11.b
+cout <= and_2:C14.output
+S <= and_2:c9.output
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|not_1:c1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|not_1:c2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|not_1:c3
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|and_3:c4
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|and_3:c5
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|and_3:c6
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|and_3:c7
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|or_4:c8
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|and_2:c9
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|and_2:C10
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|and_2:C11
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|and_2:C12
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|or_3:C13
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_8bits|somador_4b_so_somadores:C2|somador_1bit:C4|and_2:C14
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

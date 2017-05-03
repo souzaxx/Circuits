@@ -1,0 +1,73 @@
+# Reading C:/altera/14.1/modelsim_ase/tcl/vsim/pref.tcl
+# do somador_8bits_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
+# vmap -modelsim_quiet work gate_work 
+# Copying C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {somador_8bits_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 09:02:33 on Apr 12,2017
+# vcom -reportprogress 300 -93 -work work somador_8bits_6_1200mv_85c_slow.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneiv_atom_pack
+# -- Loading package cycloneiv_components
+# -- Compiling entity somador_8bits
+# -- Compiling architecture structure of somador_8bits
+# End time: 09:02:33 on Apr 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.somador_8bits(structure)
+# vsim -gui "+altera" -l msim_transcript -do "somador_8bits_run_msim_gate_vhdl.do" 
+# Start time: 09:02:45 on Apr 12,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneiv.cycloneiv_atom_pack(body)
+# Loading cycloneiv.cycloneiv_components
+# Loading work.somador_8bits(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiv.cycloneiv_io_obuf(arch)
+# Loading cycloneiv.cycloneiv_io_ibuf(arch)
+# Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)
+vsim work.somador_8bits(structure)
+# vsim 
+# Start time: 09:02:49 on Apr 12,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneiv.cycloneiv_atom_pack(body)
+# Loading cycloneiv.cycloneiv_components
+# Loading work.somador_8bits(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiv.cycloneiv_io_obuf(arch)
+# Loading cycloneiv.cycloneiv_io_ibuf(arch)
+# Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)
+add wave -position end  sim:/somador_8bits/x
+add wave -position end  sim:/somador_8bits/y
+add wave -position end  sim:/somador_8bits/habilita
+add wave -position end  sim:/somador_8bits/S
+add wave -position end  sim:/somador_8bits/cout
+force -freeze sim:/somador_8bits/habilita 1 0
+force -freeze sim:/somador_8bits/x 10011001 0
+force -freeze sim:/somador_8bits/y 11011101 0
+run
+force -freeze sim:/somador_8bits/habilita 0 0
+run
+# End time: 09:44:08 on Apr 12,2017, Elapsed time: 0:41:19
+# Errors: 0, Warnings: 0
