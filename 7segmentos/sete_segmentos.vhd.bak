@@ -1,0 +1,9 @@
+ENTITY sete_segmentos IS
+	PORT(	abcd			IN BIT_vector(3 downto 0);
+			habilita:	IN BIT;
+			S				IN BIT_vector(6 downto 0));
+END sete_segmentos;
+
+ARCHITECTURE structural of sete_segmentos IS
+
+COMPONENT not1 PORT(a: 		IN bit; output: OUT bit); END COMPONENT;

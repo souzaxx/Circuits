@@ -1,0 +1,254 @@
+|sete_segmentos
+ABCD[0] => not_1:C4.a
+ABCD[0] => and_2:C5.b
+ABCD[0] => and_2:C8.b
+ABCD[0] => and_3:C12.c
+ABCD[0] => or_3:C23.c
+ABCD[1] => not_1:C3.a
+ABCD[1] => and_2:C8.a
+ABCD[1] => and_2:C9.a
+ABCD[1] => and_2:C10.a
+ABCD[1] => and_2:C14.a
+ABCD[1] => and_2:C18.a
+ABCD[1] => and_2:C20.b
+ABCD[1] => or_4:C21.b
+ABCD[2] => not_1:C2.a
+ABCD[2] => and_2:C5.a
+ABCD[2] => and_3:C12.a
+ABCD[2] => and_2:C16.a
+ABCD[2] => and_2:C17.a
+ABCD[2] => and_2:C19.a
+ABCD[2] => or_3:C23.a
+ABCD[3] => not_1:C1.a
+ABCD[3] => or_4:C21.a
+ABCD[3] => or_5:C24.a
+ABCD[3] => or_4:C26.a
+ABCD[3] => or_4:C27.a
+habilita => and_2:C28.a
+habilita => and_2:C29.a
+habilita => and_2:C30.a
+habilita => and_2:C31.a
+habilita => and_2:C32.a
+habilita => and_2:C33.a
+habilita => and_2:C34.a
+abcdefg[0] <= and_2:C34.output
+abcdefg[1] <= and_2:C33.output
+abcdefg[2] <= and_2:C32.output
+abcdefg[3] <= and_2:C31.output
+abcdefg[4] <= and_2:C30.output
+abcdefg[5] <= and_2:C29.output
+abcdefg[6] <= and_2:C28.output
+
+
+|sete_segmentos|not_1:C1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|not_1:C2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|not_1:C3
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|not_1:C4
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C5
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C6
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C7
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C8
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C9
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C10
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C11
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_3:C12
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C13
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C14
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C15
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C16
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C17
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C18
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C19
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C20
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|or_4:C21
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|or_3:C22
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|or_3:C23
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|or_5:C24
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+e => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|or_2:C25
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|or_4:C26
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|or_4:C27
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C28
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C29
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C30
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C31
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C32
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C33
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sete_segmentos|and_2:C34
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
