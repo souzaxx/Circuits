@@ -1,0 +1,13 @@
+ENTITY zeroAnove IS
+	PORT(	abcd: 		IN 	std_logic_vector(3 downto 0);
+			reset:		OUT	BIT;
+END zeroAnove;
+
+ARCHITECTURE structural OF counterFFD IS
+	BEGIN
+		IF abcd >= '1001' THEN
+			reset <= '1';
+		ELSE
+			reset <= '0';
+	END IF;
+END structural;

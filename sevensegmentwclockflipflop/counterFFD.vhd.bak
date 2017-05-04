@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY counterFFD IS
+	PORT( clock: 		IN 	std_logic;
+			habilita: 	IN 	bit;
+			wxyz: 		OUT 	std_logic_vector(3 downto 0);
+			Cout:			OUT 	bit);
+END counterFFD;
+
+ARCHITECTURE structural OF counterFFD IS
+
+	COMPONENT FlipFlopD PORT(clock,D: IN std_logic;Q,nQ: OUT std_logic); END COMPONENT;
+	
+	FOR ALL: FFD USE ENTITY work.FlipFlopD(structural);
+	
+	SIGNAL A,X: std_logic_vector(3 downto 0);
+	
+BEGIN
+	X(0) <= wxyz(0) XOR habilita;
+	FFD1: FFD(clock,X(0),wxyz(0),null);
+	A(0) <= habilita AND wxyz(0);
+
+	X(1) <= wxyz(1) XOR habilita;
+	FFD1: FFD(clock,X(1),wxyz(1),null);
+	A(1) <= A(0) AND wxyz(1);
+	
+	X(2) <= wxyz(2) XOR habilita;
+	FFD1: FFD(clock,X(2),wxyz(2),null);
+	A(2) <= A(1) AND wxyz(2);
+	
+	X(3) <= wxyz(3) XOR habilita;
+	FFD1: FFD(clock,X(3),wxyz(3),null);
+	Cout <= A(2) AND wxyz(3);
+END structural;
