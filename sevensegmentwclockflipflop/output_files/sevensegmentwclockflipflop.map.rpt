@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sevensegmentwclockflipflop
-Thu May 04 10:24:45 2017
+Mon May 08 08:04:19 2017
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu May 04 10:24:45 2017          ;
+; Analysis & Synthesis Status        ; Failed - Mon May 08 08:04:19 2017          ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; sevensegmentwclockflipflop                 ;
 ; Top-level Entity Name              ; sevensegmentwclockflipflop                 ;
@@ -149,7 +149,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Thu May 04 10:24:19 2017
+    Info: Processing started: Mon May 08 08:03:53 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sevensegmentwclockflipflop -c sevensegmentwclockflipflop
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sete_segmentos.vhd
@@ -186,14 +186,10 @@ Critical Warning (12048): Ignored duplicate design unit "counterFFD-structural" 
 Info (12021): Found 2 design units, including 1 entities, in source file zeroanove.vhd
     Info (12022): Found design unit 1: counterFFD-structural
     Info (12023): Found entity 1: zeroAnove
-Error (10777): VHDL error at counterFFD.vhd(42): expected an architecture identifier in index File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 42
-Error (10346): VHDL error at counterFFD.vhd(42): formal port or parameter "clock" must have actual or default value File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 42
-Error (10784): HDL error at counterFFD.vhd(13): see declaration for object "clock" File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 13
-Error (10346): VHDL error at counterFFD.vhd(42): formal port or parameter "D" must have actual or default value File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 42
-Error (10784): HDL error at counterFFD.vhd(13): see declaration for object "D" File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 13
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 5 errors, 2 warnings
+Error (10803): VHDL error at counterFFD.vhd(41): FlipFlopD is not a subprogram, a type, or an array object File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 41
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
     Error: Peak virtual memory: 694 megabytes
-    Error: Processing ended: Thu May 04 10:24:45 2017
+    Error: Processing ended: Mon May 08 08:04:19 2017
     Error: Elapsed time: 00:00:26
     Error: Total CPU time (on all processors): 00:00:25
 
