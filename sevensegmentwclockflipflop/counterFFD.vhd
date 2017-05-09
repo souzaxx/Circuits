@@ -10,19 +10,19 @@ END counterFFD;
 
 ARCHITECTURE structural OF counterFFD IS
 
-	COMPONENT FlipFlopD PORT(clock,D: IN std_logic;Q,nQ: OUT std_logic); END COMPONENT;
+	COMPONENT FlipFlopD PORT (clock,D: IN std_logic;Q,nQ: OUT std_logic); END COMPONENT;
 	
 	FOR ALL: FlipFlopD USE ENTITY work.FlipFlopD(structural);
 	
-	SIGNAL A,X,wxyz_reg: std_logic_vector(3 downto 0);
+	SIGNAL A,X,wxyz_reg,Qn_reg: std_logic_vector(3 downto 0);
 	
 BEGIN
-	PROCESS(clock,reset,A,X) BEGIN
+	PROCESS(clock,reset,A,X,wxyz_reg) BEGIN
 		IF reset='1' THEN
 			wxyz_reg	<= "0000";
 			A			<= "0000";
 			X			<= "0000";
-		ELSE 
+		ELSIF clock'event and clock='1' THEN
 			X(0) <= wxyz_reg(0) XOR habilita;
 			A(0) <= habilita AND wxyz_reg(0);
 
@@ -34,15 +34,13 @@ BEGIN
 		
 			X(3) <= wxyz_reg(3) XOR habilita;
 			Cout <= A(2) AND wxyz_reg(3);
-			
-			wxyz <= wxyz_reg;
 		END IF;	
-		
-			FFD1: FlipFlopD(clock,X(0),wxyz(0),null);
-			FFD2: FlipFlopD(clock,X(1),wxyz(1),null);
-			FFD3: FlipFlopD(clock,X(2),wxyz(2),null);
-			FFD4: FlipFlopD(clock,X(3),wxyz(3),null);
-		
 	END PROCESS;
+		
+		FFD1: FlipFlopD PORT MAP (clock,X(0),wxyz_reg(0),Qn_reg(0));
+		FFD2: FlipFlopD PORT MAP (clock,X(1),wxyz_reg(1),Qn_reg(1));
+		FFD3: FlipFlopD PORT MAP (clock,X(2),wxyz_reg(2),Qn_reg(2));
+		FFD4: FlipFlopD PORT MAP (clock,X(3),wxyz_reg(3),Qn_reg(3));
+		out1: wxyz <= wxyz_reg;
 		
 END structural;

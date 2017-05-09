@@ -1,8 +1,5 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
 ENTITY or_4 IS
-	PORT(a,b,c,d: IN std_logic; output: OUT std_logic);
+	PORT(a,b,c,d: IN bit; output: OUT bit);
 END or_4;
 
 ARCHITECTURE data_flow OF or_4 IS

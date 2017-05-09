@@ -1,15 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 ENTITY zeroAnove IS
-	PORT(	abcd: 		IN 	std_logic_vector(3 downto 0);
-			reset:		OUT	BIT);
+	PORT(	ABCD:			IN 	std_logic_vector(3 downto 0);
+			reset:		OUT	std_logic);
 END zeroAnove;
 
-ARCHITECTURE structural OF counterFFD IS
+ARCHITECTURE structural OF zeroAnove IS
+
+	VARIABLE reset_buf: std_logic := '0';	
+	
 	BEGIN
-		PROCESS(abcd,reset) BEGIN
-			IF abcd >= "9" THEN
-				reset <= "1";
+		PROCESS(ABCD) BEGIN
+			IF (ABCD(0) = '1' AND ABCD(3) = '1') THEN
+				reset_buf := '1';
 			ELSE
-				reset <= "0";
+				reset_buf := '0';
 		END IF;
 	END PROCESS;
+	
+	C1: reset <= reset_buf;
+	
 END structural;
