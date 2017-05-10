@@ -1,3 +1,78 @@
 |sevensegmentwclockflipflop
+clock => counterffd:counter.clock
+habilita => counterffd:counter.habilita
+reset <> counterffd:counter.reset
+reset <> zeroanove:reseter.reset
+abcd[0] << counterffd:counter.wxyz[0]
+abcd[1] << counterffd:counter.wxyz[1]
+abcd[2] << counterffd:counter.wxyz[2]
+abcd[3] << counterffd:counter.wxyz[3]
+
+
+|sevensegmentwclockflipflop|counterFFD:counter
+clock => Cout~reg0.CLK
+clock => reset~reg0.CLK
+clock => A[0].CLK
+clock => A[1].CLK
+clock => A[2].CLK
+clock => WXYZ_FFD[0].CLK
+clock => WXYZ_FFD[1].CLK
+clock => WXYZ_FFD[2].CLK
+clock => WXYZ_FFD[3].CLK
+clock => wxyz_reg[0].CLK
+clock => wxyz_reg[1].CLK
+clock => wxyz_reg[2].CLK
+clock => wxyz_reg[3].CLK
+clock => flipflopd:FFD1.clock
+clock => flipflopd:FFD2.clock
+clock => flipflopd:FFD3.clock
+clock => flipflopd:FFD4.clock
+habilita => WXYZ_FFD.IN1
+habilita => A.IN1
+habilita => WXYZ_FFD.IN1
+habilita => WXYZ_FFD.IN1
+habilita => WXYZ_FFD.IN1
+reset <> reset~reg0
+wxyz[0] <= flipflopd:FFD1.Q
+wxyz[1] <= flipflopd:FFD2.Q
+wxyz[2] <= flipflopd:FFD3.Q
+wxyz[3] <= flipflopd:FFD4.Q
+Cout <= Cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD1
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD2
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD3
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD4
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sevensegmentwclockflipflop|zeroAnove:reseter
+ABCD[0] => process_0.IN0
+ABCD[1] => ~NO_FANOUT~
+ABCD[2] => ~NO_FANOUT~
+ABCD[3] => process_0.IN1
+reset <> reset
 
 

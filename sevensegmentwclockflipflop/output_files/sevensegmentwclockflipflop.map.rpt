@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sevensegmentwclockflipflop
-Tue May 09 11:36:37 2017
+Wed May 10 10:15:04 2017
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -9,7 +9,13 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Analysis & Synthesis Messages
+  4. Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD4"
+  5. Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD3"
+  6. Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD2"
+  7. Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD1"
+  8. Port Connectivity Checks: "counterFFD:counter"
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -36,7 +42,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue May 09 11:36:37 2017          ;
+; Analysis & Synthesis Status        ; Failed - Wed May 10 10:15:04 2017          ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; sevensegmentwclockflipflop                 ;
 ; Top-level Entity Name              ; sevensegmentwclockflipflop                 ;
@@ -143,13 +149,67 @@ agreement for further details.
 +----------------------------------------------------------------------------+----------------------------+----------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD4"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD3"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD2"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD1"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counterFFD:counter"                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue May 09 11:36:10 2017
+    Info: Processing started: Wed May 10 10:14:33 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sevensegmentwclockflipflop -c sevensegmentwclockflipflop
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sete_segmentos.vhd
@@ -189,25 +249,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file sevense
     Info (12022): Found design unit 1: sevensegmentwclockflipflop-structural
     Info (12023): Found entity 1: sevensegmentwclockflipflop
 Info (12127): Elaborating entity "sevensegmentwclockflipflop" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at sevensegmentwclockflipflop.vhd(27): object "Cout" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at sevensegmentwclockflipflop.vhd(31): object "Cout" assigned a value but never read
 Info (12129): Elaborating entity "counterFFD" using architecture "A:structural" for hierarchy "counterFFD:counter"
-Warning (10036): Verilog HDL or VHDL warning at counterFFD.vhd(17): object "Qn_reg" assigned a value but never read
-Warning (10631): VHDL Process Statement warning at counterFFD.vhd(20): inferring latch(es) for signal or variable "wxyz_reg", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at counterFFD.vhd(20): inferring latch(es) for signal or variable "A", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "wxyz_reg[0]" at counterFFD.vhd(20)
-Info (10041): Inferred latch for "wxyz_reg[1]" at counterFFD.vhd(20)
-Info (10041): Inferred latch for "wxyz_reg[2]" at counterFFD.vhd(20)
-Info (10041): Inferred latch for "wxyz_reg[3]" at counterFFD.vhd(20)
-Error (10028): Can't resolve multiple constant drivers for net "wxyz_reg[3]" at counterFFD.vhd(43) File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 43
-Error (10029): Constant driver at counterFFD.vhd(20) File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 20
-Error (10028): Can't resolve multiple constant drivers for net "wxyz_reg[2]" at counterFFD.vhd(42) File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 42
-Error (10028): Can't resolve multiple constant drivers for net "wxyz_reg[1]" at counterFFD.vhd(41) File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 41
-Error (10028): Can't resolve multiple constant drivers for net "wxyz_reg[0]" at counterFFD.vhd(40) File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd Line: 40
-Error (12152): Can't elaborate user hierarchy "counterFFD:counter" File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/sevensegmentwclockflipflop.vhd Line: 32
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 6 errors, 5 warnings
-    Error: Peak virtual memory: 693 megabytes
-    Error: Processing ended: Tue May 09 11:36:37 2017
-    Error: Elapsed time: 00:00:27
-    Error: Total CPU time (on all processors): 00:00:25
+Warning (10036): Verilog HDL or VHDL warning at counterFFD.vhd(18): object "Qn_reg" assigned a value but never read
+Info (12129): Elaborating entity "FlipFlopD" using architecture "A:structural" for hierarchy "counterFFD:counter|FlipFlopD:FFD1"
+Warning (10541): VHDL Signal Declaration warning at FlipFlopD.vhd(6): used implicit default value for signal "nQ" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12129): Elaborating entity "zeroAnove" using architecture "A:structural" for hierarchy "zeroAnove:reseter"
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "reset" and its non-tri-state driver.
+Warning (13032): The following tri-state nodes are fed by constants
+    Warning (13033): The pin "reset" is fed by GND
+Error (13076): The pin "reset" has multiple drivers due to the non-tri-state driver "counterFFD:counter|FlipFlopD:FFD1|Q" File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/sevensegmentwclockflipflop.vhd Line: 6
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 8 warnings
+    Error: Peak virtual memory: 708 megabytes
+    Error: Processing ended: Wed May 10 10:15:04 2017
+    Error: Elapsed time: 00:00:31
+    Error: Total CPU time (on all processors): 00:00:27
 
 
