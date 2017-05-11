@@ -14,7 +14,7 @@
 # 
 # vcom -93 -work work {sevensegmentwclockflipflop_6_1200mv_85c_slow.vho}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 09:14:56 on May 10,2017
+# Start time: 08:10:20 on May 11,2017
 # vcom -reportprogress 300 -93 -work work sevensegmentwclockflipflop_6_1200mv_85c_slow.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -27,12 +27,12 @@
 # -- Loading package cycloneiv_components
 # -- Compiling entity sevensegmentwclockflipflop
 # -- Compiling architecture structure of sevensegmentwclockflipflop
-# End time: 09:14:56 on May 10,2017, Elapsed time: 0:00:00
+# End time: 08:10:20 on May 11,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.sevensegmentwclockflipflop(structure)
 # vsim -gui "+altera" -l msim_transcript -do "sevensegmentwclockflipflop_run_msim_gate_vhdl.do" 
-# Start time: 09:15:16 on May 10,2017
+# Start time: 08:10:27 on May 11,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -52,11 +52,10 @@ vsim work.sevensegmentwclockflipflop(structure)
 # Loading altera.dffeas(vital_dffeas)
 add wave -position end  sim:/sevensegmentwclockflipflop/clock
 add wave -position end  sim:/sevensegmentwclockflipflop/habilita
+add wave -position end  sim:/sevensegmentwclockflipflop/reset
 add wave -position end  sim:/sevensegmentwclockflipflop/abcdefg
-force -freeze sim:/sevensegmentwclockflipflop/clock 1 0, 0 {0 ps} -r 10
-run
-run
-run
+force -freeze sim:/sevensegmentwclockflipflop/clock 1 0, 0 {50 ps} -r 100
+# Can't move the Now cursor.
 run
 force -freeze sim:/sevensegmentwclockflipflop/habilita 1 0
 run
@@ -75,50 +74,5 @@ run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run -continue
-run -all
-# End time: 09:16:48 on May 10,2017, Elapsed time: 0:01:32
-# Errors: 0, Warnings: 0
+# End time: 08:11:20 on May 11,2017, Elapsed time: 0:00:53
+# Errors: 1, Warnings: 0

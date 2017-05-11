@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sevensegmentwclockflipflop
-Wed May 10 10:15:04 2017
+Thu May 11 08:09:35 2017
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -9,13 +9,15 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD4"
-  5. Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD3"
-  6. Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD2"
-  7. Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD1"
-  8. Port Connectivity Checks: "counterFFD:counter"
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Port Connectivity Checks: "sete_segmentos:display|not_1:C1"
+  9. Port Connectivity Checks: "counterFFD:counter"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,24 +44,24 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 10 10:15:04 2017          ;
+; Analysis & Synthesis Status        ; Successful - Thu May 11 08:09:34 2017      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; sevensegmentwclockflipflop                 ;
 ; Top-level Entity Name              ; sevensegmentwclockflipflop                 ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                  ;
-; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                  ;
-; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                  ;
-; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 17                                         ;
+;     Total combinational functions  ; 17                                         ;
+;     Dedicated logic registers      ; 4                                          ;
+; Total registers                    ; 4                                          ;
+; Total pins                         ; 10                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -149,40 +151,88 @@ agreement for further details.
 +----------------------------------------------------------------------------+----------------------------+----------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD4"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
+; sete_segmentos.vhd               ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/sete_segmentos.vhd             ;         ;
+; or_5.vhd                         ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/or_5.vhd                       ;         ;
+; or_4.vhd                         ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/or_4.vhd                       ;         ;
+; or_3.vhd                         ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/or_3.vhd                       ;         ;
+; or_2.vhd                         ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/or_2.vhd                       ;         ;
+; not_1.vhd                        ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/not_1.vhd                      ;         ;
+; and_3.vhd                        ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/and_3.vhd                      ;         ;
+; and_2.vhd                        ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/and_2.vhd                      ;         ;
+; FlipFlopD.vhd                    ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/FlipFlopD.vhd                  ;         ;
+; counterFFD.vhd                   ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd                 ;         ;
+; zeroAnove.vhd                    ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/zeroAnove.vhd                  ;         ;
+; sevensegmentwclockflipflop.vhd   ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/sevensegmentwclockflipflop.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD3"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++--------------------------+------------------------------------------+
+; Resource                 ; Usage                                    ;
++--------------------------+------------------------------------------+
+; I/O pins                 ; 10                                       ;
+;                          ;                                          ;
+; DSP block 9-bit elements ; 0                                        ;
+;                          ;                                          ;
+; Maximum fan-out node     ; counterFFD:counter|FlipFlopD:FFD2|Q~reg0 ;
+; Maximum fan-out          ; 12                                       ;
+; Total fan-out            ; 84                                       ;
+; Average fan-out          ; 2.00                                     ;
++--------------------------+------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD2"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Library Name ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+; |sevensegmentwclockflipflop ; 17 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 10   ; 0            ; |sevensegmentwclockflipflop                                   ; work         ;
+;    |counterFFD:counter|     ; 5 (4)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter                ; work         ;
+;       |FlipFlopD:FFD1|      ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD1 ; work         ;
+;       |FlipFlopD:FFD2|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD2 ; work         ;
+;       |FlipFlopD:FFD3|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD3 ; work         ;
+;       |FlipFlopD:FFD4|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD4 ; work         ;
+;    |sete_segmentos:display| ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display            ; work         ;
+;       |and_2:C28|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C28  ; work         ;
+;       |and_2:C29|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C29  ; work         ;
+;       |and_2:C30|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C30  ; work         ;
+;       |and_2:C31|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C31  ; work         ;
+;       |and_2:C32|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C32  ; work         ;
+;       |and_2:C33|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C33  ; work         ;
+;       |and_2:C34|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C34  ; work         ;
+;    |zeroAnove:reseter|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|zeroAnove:reseter                 ; work         ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counterFFD:counter|FlipFlopD:FFD1"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sete_segmentos:display|not_1:C1"                                                      ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -192,6 +242,27 @@ agreement for further details.
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 10                          ;
+; cycloneiii_ff         ; 4                           ;
+;     CLR               ; 4                           ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 17                          ;
+;     normal            ; 17                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.46                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -209,7 +280,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Wed May 10 10:14:33 2017
+    Info: Processing started: Thu May 11 08:09:07 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sevensegmentwclockflipflop -c sevensegmentwclockflipflop
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sete_segmentos.vhd
@@ -249,21 +320,38 @@ Info (12021): Found 2 design units, including 1 entities, in source file sevense
     Info (12022): Found design unit 1: sevensegmentwclockflipflop-structural
     Info (12023): Found entity 1: sevensegmentwclockflipflop
 Info (12127): Elaborating entity "sevensegmentwclockflipflop" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at sevensegmentwclockflipflop.vhd(31): object "Cout" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at sevensegmentwclockflipflop.vhd(29): object "Cout" assigned a value but never read
 Info (12129): Elaborating entity "counterFFD" using architecture "A:structural" for hierarchy "counterFFD:counter"
-Warning (10036): Verilog HDL or VHDL warning at counterFFD.vhd(18): object "Qn_reg" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at counterFFD.vhd(8): used implicit default value for signal "Cout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12129): Elaborating entity "FlipFlopD" using architecture "A:structural" for hierarchy "counterFFD:counter|FlipFlopD:FFD1"
-Warning (10541): VHDL Signal Declaration warning at FlipFlopD.vhd(6): used implicit default value for signal "nQ" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12129): Elaborating entity "zeroAnove" using architecture "A:structural" for hierarchy "zeroAnove:reseter"
+Info (12129): Elaborating entity "sete_segmentos" using architecture "A:structural" for hierarchy "sete_segmentos:display"
+Warning (10036): Verilog HDL or VHDL warning at sete_segmentos.vhd(28): object "nA" assigned a value but never read
+Info (12129): Elaborating entity "not_1" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|not_1:C1"
+Info (12129): Elaborating entity "and_2" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|and_2:C5"
+Info (12129): Elaborating entity "and_3" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|and_3:C12"
+Info (12129): Elaborating entity "or_4" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|or_4:C21"
+Info (12129): Elaborating entity "or_3" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|or_3:C22"
+Info (12129): Elaborating entity "or_5" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|or_5:C24"
+Info (12129): Elaborating entity "or_2" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|or_2:C25"
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "reset" and its non-tri-state driver.
-Warning (13032): The following tri-state nodes are fed by constants
-    Warning (13033): The pin "reset" is fed by GND
-Error (13076): The pin "reset" has multiple drivers due to the non-tri-state driver "counterFFD:counter|FlipFlopD:FFD1|Q" File: C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/sevensegmentwclockflipflop.vhd Line: 6
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 8 warnings
-    Error: Peak virtual memory: 708 megabytes
-    Error: Processing ended: Wed May 10 10:15:04 2017
-    Error: Elapsed time: 00:00:31
-    Error: Total CPU time (on all processors): 00:00:27
+Info (13060): One or more bidirs are fed by always enabled tri-state buffers
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "reset" is moved to its source
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "reset~synth"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 27 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 7 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 17 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 703 megabytes
+    Info: Processing ended: Thu May 11 08:09:35 2017
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:26
 
 
