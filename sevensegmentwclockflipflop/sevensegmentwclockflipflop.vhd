@@ -14,6 +14,7 @@ ARCHITECTURE structural OF sevensegmentwclockflipflop IS
 										
 	COMPONENT counterFFD PORT( clock: 				IN 		std_logic;
 										reset: 				IN 		std_logic;
+										habilita: 			IN			std_logic;
 										wxyz: 				INOUT 	std_logic_vector(3 downto 0);
 										Cout:					OUT 		std_logic); END COMPONENT;
 										
@@ -25,13 +26,11 @@ ARCHITECTURE structural OF sevensegmentwclockflipflop IS
 	FOR ALL: counterFFD USE ENTITY work.counterFFD(structural);
 	FOR ALL: sete_segmentos USE ENTITY work.sete_segmentos(structural);
 	
-	--SIGNAL reset: std_logic;
 	SIGNAL Cout: std_logic;
 	SIGNAL abcd: std_logic_vector(3 downto 0);
 	
 	BEGIN
-	
-	counter: 	counterFFD 		PORT MAP (clock,reset,abcd,Cout);
+	counter: 	counterFFD 		PORT MAP (clock,reset,habilita,abcd,Cout);
 	reseter: 	zeroAnove		PORT MAP (abcd,reset);
 	display:		sete_segmentos	PORT MAP (abcd,habilita,abcdefg);
 	

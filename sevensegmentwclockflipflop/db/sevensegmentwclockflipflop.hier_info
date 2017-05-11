@@ -1,33 +1,45 @@
 |sevensegmentwclockflipflop
 clock => counterffd:counter.clock
+habilita => counterffd:counter.habilita
 habilita => sete_segmentos:display.habilita
 reset <> comb
-abcdefg[0] <= sete_segmentos:display.abcdefg[0]
-abcdefg[1] <= sete_segmentos:display.abcdefg[1]
-abcdefg[2] <= sete_segmentos:display.abcdefg[2]
-abcdefg[3] <= sete_segmentos:display.abcdefg[3]
-abcdefg[4] <= sete_segmentos:display.abcdefg[4]
-abcdefg[5] <= sete_segmentos:display.abcdefg[5]
-abcdefg[6] <= sete_segmentos:display.abcdefg[6]
+abcdefg[0] << sete_segmentos:display.abcdefg[0]
+abcdefg[1] << sete_segmentos:display.abcdefg[1]
+abcdefg[2] << sete_segmentos:display.abcdefg[2]
+abcdefg[3] << sete_segmentos:display.abcdefg[3]
+abcdefg[4] << sete_segmentos:display.abcdefg[4]
+abcdefg[5] << sete_segmentos:display.abcdefg[5]
+abcdefg[6] << sete_segmentos:display.abcdefg[6]
 
 
 |sevensegmentwclockflipflop|counterFFD:counter
+clock => unidadecontadora:UNIDADE1.clock
+clock => unidadecontadora:UNIDADE2.clock
+clock => unidadecontadora:UNIDADE3.clock
+clock => unidadecontadora:UNIDADE4.clock
+reset => unidadecontadora:UNIDADE1.reset
+reset => unidadecontadora:UNIDADE2.reset
+reset => unidadecontadora:UNIDADE3.reset
+reset => unidadecontadora:UNIDADE4.reset
+habilita => unidadecontadora:UNIDADE1.habilita
+wxyz[0] <> unidadecontadora:UNIDADE1.Q
+wxyz[1] <> unidadecontadora:UNIDADE2.Q
+wxyz[2] <> unidadecontadora:UNIDADE3.Q
+wxyz[3] <> unidadecontadora:UNIDADE4.Q
+Cout <= unidadecontadora:UNIDADE4.Cout
+
+
+|sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE1
 clock => flipflopd:FFD1.clock
-clock => flipflopd:FFD2.clock
-clock => flipflopd:FFD3.clock
-clock => flipflopd:FFD4.clock
 reset => flipflopd:FFD1.reset
-reset => flipflopd:FFD2.reset
-reset => flipflopd:FFD3.reset
-reset => flipflopd:FFD4.reset
-wxyz[0] <> flipflopd:FFD1.Q
-wxyz[1] <> flipflopd:FFD2.Q
-wxyz[2] <> flipflopd:FFD3.Q
-wxyz[3] <> flipflopd:FFD4.Q
-Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+habilita => XOR0.IN1
+habilita => Cout.IN1
+Q <> flipflopd:FFD1.Q
+Qn <> flipflopd:FFD1.nQ
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD1
+|sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1
 clock => Q~reg0.CLK
 reset => Q~reg0.ACLR
 D => Q~reg0.DATAIN
@@ -35,7 +47,17 @@ Q <> Q~reg0
 nQ <> nQ
 
 
-|sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD2
+|sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE2
+clock => flipflopd:FFD1.clock
+reset => flipflopd:FFD1.reset
+habilita => XOR0.IN1
+habilita => Cout.IN1
+Q <> flipflopd:FFD1.Q
+Qn <> flipflopd:FFD1.nQ
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1
 clock => Q~reg0.CLK
 reset => Q~reg0.ACLR
 D => Q~reg0.DATAIN
@@ -43,7 +65,17 @@ Q <> Q~reg0
 nQ <> nQ
 
 
-|sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD3
+|sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE3
+clock => flipflopd:FFD1.clock
+reset => flipflopd:FFD1.reset
+habilita => XOR0.IN1
+habilita => Cout.IN1
+Q <> flipflopd:FFD1.Q
+Qn <> flipflopd:FFD1.nQ
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1
 clock => Q~reg0.CLK
 reset => Q~reg0.ACLR
 D => Q~reg0.DATAIN
@@ -51,7 +83,17 @@ Q <> Q~reg0
 nQ <> nQ
 
 
-|sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD4
+|sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE4
+clock => flipflopd:FFD1.clock
+reset => flipflopd:FFD1.reset
+habilita => XOR0.IN1
+habilita => Cout.IN1
+Q <> flipflopd:FFD1.Q
+Qn <> flipflopd:FFD1.nQ
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1
 clock => Q~reg0.CLK
 reset => Q~reg0.ACLR
 D => Q~reg0.DATAIN

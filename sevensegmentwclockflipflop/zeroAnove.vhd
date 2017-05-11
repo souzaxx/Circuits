@@ -9,7 +9,7 @@ END zeroAnove;
 ARCHITECTURE structural OF zeroAnove IS
 	BEGIN
 		PROCESS(ABCD) BEGIN
-			IF (ABCD(0) = '1' AND ABCD(1) = '0' AND ABCD(2) = '1' AND ABCD(3) = '0') THEN
+			IF (ABCD(0) = '0' AND ABCD(1) = '1' AND ABCD(2) = '0' AND ABCD(3) = '1') THEN
 				reset <= '0';
 			ELSE
 				reset <= '1';

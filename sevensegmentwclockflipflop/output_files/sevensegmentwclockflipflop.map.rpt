@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sevensegmentwclockflipflop
-Thu May 11 08:09:35 2017
+Thu May 11 09:19:01 2017
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -14,10 +14,14 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
   8. Port Connectivity Checks: "sete_segmentos:display|not_1:C1"
-  9. Port Connectivity Checks: "counterFFD:counter"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE4"
+ 10. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE3"
+ 11. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE2"
+ 12. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE1"
+ 13. Port Connectivity Checks: "counterFFD:counter"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +48,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 11 08:09:34 2017      ;
+; Analysis & Synthesis Status        ; Successful - Thu May 11 09:19:01 2017      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; sevensegmentwclockflipflop                 ;
 ; Top-level Entity Name              ; sevensegmentwclockflipflop                 ;
@@ -168,46 +172,51 @@ agreement for further details.
 ; counterFFD.vhd                   ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/counterFFD.vhd                 ;         ;
 ; zeroAnove.vhd                    ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/zeroAnove.vhd                  ;         ;
 ; sevensegmentwclockflipflop.vhd   ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/sevensegmentwclockflipflop.vhd ;         ;
+; UnidadeContadora.vhd             ; yes             ; User VHDL File  ; C:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/UnidadeContadora.vhd           ;         ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                         ;
-+--------------------------+------------------------------------------+
-; Resource                 ; Usage                                    ;
-+--------------------------+------------------------------------------+
-; I/O pins                 ; 10                                       ;
-;                          ;                                          ;
-; DSP block 9-bit elements ; 0                                        ;
-;                          ;                                          ;
-; Maximum fan-out node     ; counterFFD:counter|FlipFlopD:FFD2|Q~reg0 ;
-; Maximum fan-out          ; 12                                       ;
-; Total fan-out            ; 84                                       ;
-; Average fan-out          ; 2.00                                     ;
-+--------------------------+------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                   ;
++--------------------------+--------------------------------------------------------------------+
+; Resource                 ; Usage                                                              ;
++--------------------------+--------------------------------------------------------------------+
+; I/O pins                 ; 10                                                                 ;
+;                          ;                                                                    ;
+; DSP block 9-bit elements ; 0                                                                  ;
+;                          ;                                                                    ;
+; Maximum fan-out node     ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ;
+; Maximum fan-out          ; 12                                                                 ;
+; Total fan-out            ; 88                                                                 ;
+; Average fan-out          ; 2.10                                                               ;
++--------------------------+--------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Library Name ;
-+-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------+--------------+
-; |sevensegmentwclockflipflop ; 17 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 10   ; 0            ; |sevensegmentwclockflipflop                                   ; work         ;
-;    |counterFFD:counter|     ; 5 (4)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter                ; work         ;
-;       |FlipFlopD:FFD1|      ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD1 ; work         ;
-;       |FlipFlopD:FFD2|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD2 ; work         ;
-;       |FlipFlopD:FFD3|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD3 ; work         ;
-;       |FlipFlopD:FFD4|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|FlipFlopD:FFD4 ; work         ;
-;    |sete_segmentos:display| ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display            ; work         ;
-;       |and_2:C28|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C28  ; work         ;
-;       |and_2:C29|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C29  ; work         ;
-;       |and_2:C30|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C30  ; work         ;
-;       |and_2:C31|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C31  ; work         ;
-;       |and_2:C32|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C32  ; work         ;
-;       |and_2:C33|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C33  ; work         ;
-;       |and_2:C34|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C34  ; work         ;
-;    |zeroAnove:reseter|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|zeroAnove:reseter                 ; work         ;
-+-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Library Name ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+; |sevensegmentwclockflipflop       ; 17 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 10   ; 0            ; |sevensegmentwclockflipflop                                                             ; work         ;
+;    |counterFFD:counter|           ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter                                          ; work         ;
+;       |unidadeContadora:UNIDADE1| ; 1 (1)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE1                ; work         ;
+;          |FlipFlopD:FFD1|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1 ; work         ;
+;       |unidadeContadora:UNIDADE2| ; 1 (1)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE2                ; work         ;
+;          |FlipFlopD:FFD1|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1 ; work         ;
+;       |unidadeContadora:UNIDADE3| ; 2 (2)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE3                ; work         ;
+;          |FlipFlopD:FFD1|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1 ; work         ;
+;       |unidadeContadora:UNIDADE4| ; 1 (1)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE4                ; work         ;
+;          |FlipFlopD:FFD1|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1 ; work         ;
+;    |sete_segmentos:display|       ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display                                      ; work         ;
+;       |and_2:C28|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C28                            ; work         ;
+;       |and_2:C29|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C29                            ; work         ;
+;       |and_2:C30|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C30                            ; work         ;
+;       |and_2:C31|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C31                            ; work         ;
+;       |and_2:C32|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C32                            ; work         ;
+;       |and_2:C33|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C33                            ; work         ;
+;       |and_2:C34|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|sete_segmentos:display|and_2:C34                            ; work         ;
+;    |zeroAnove:reseter|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|zeroAnove:reseter                                           ; work         ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,6 +244,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE4"                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; qn   ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE3"                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; qn   ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE2"                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; qn   ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE1"                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; qn   ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "counterFFD:counter"                                                                 ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -255,13 +300,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cycloneiii_io_obuf    ; 1                           ;
 ; cycloneiii_lcell_comb ; 17                          ;
 ;     normal            ; 17                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 8                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 11                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.46                        ;
+; Average LUT depth     ; 1.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -280,7 +324,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Thu May 11 08:09:07 2017
+    Info: Processing started: Thu May 11 09:18:34 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sevensegmentwclockflipflop -c sevensegmentwclockflipflop
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sete_segmentos.vhd
@@ -319,11 +363,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file zeroano
 Info (12021): Found 2 design units, including 1 entities, in source file sevensegmentwclockflipflop.vhd
     Info (12022): Found design unit 1: sevensegmentwclockflipflop-structural
     Info (12023): Found entity 1: sevensegmentwclockflipflop
+Info (12021): Found 2 design units, including 1 entities, in source file unidadecontadora.vhd
+    Info (12022): Found design unit 1: unidadeContadora-structural
+    Info (12023): Found entity 1: unidadeContadora
 Info (12127): Elaborating entity "sevensegmentwclockflipflop" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at sevensegmentwclockflipflop.vhd(29): object "Cout" assigned a value but never read
 Info (12129): Elaborating entity "counterFFD" using architecture "A:structural" for hierarchy "counterFFD:counter"
-Warning (10541): VHDL Signal Declaration warning at counterFFD.vhd(8): used implicit default value for signal "Cout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Info (12129): Elaborating entity "FlipFlopD" using architecture "A:structural" for hierarchy "counterFFD:counter|FlipFlopD:FFD1"
+Info (12129): Elaborating entity "unidadeContadora" using architecture "A:structural" for hierarchy "counterFFD:counter|unidadeContadora:UNIDADE1"
+Info (12129): Elaborating entity "FlipFlopD" using architecture "A:structural" for hierarchy "counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1"
 Info (12129): Elaborating entity "zeroAnove" using architecture "A:structural" for hierarchy "zeroAnove:reseter"
 Info (12129): Elaborating entity "sete_segmentos" using architecture "A:structural" for hierarchy "sete_segmentos:display"
 Warning (10036): Verilog HDL or VHDL warning at sete_segmentos.vhd(28): object "nA" assigned a value but never read
@@ -334,6 +381,7 @@ Info (12129): Elaborating entity "or_4" using architecture "A:data_flow" for hie
 Info (12129): Elaborating entity "or_3" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|or_3:C22"
 Info (12129): Elaborating entity "or_5" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|or_5:C24"
 Info (12129): Elaborating entity "or_2" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|or_2:C25"
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "reset" and its non-tri-state driver.
 Info (13060): One or more bidirs are fed by always enabled tri-state buffers
@@ -349,9 +397,9 @@ Info (21057): Implemented 27 device resources after synthesis - the final resour
     Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 17 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 703 megabytes
-    Info: Processing ended: Thu May 11 08:09:35 2017
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 702 megabytes
+    Info: Processing ended: Thu May 11 09:19:01 2017
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:25
 
 

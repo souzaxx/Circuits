@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/User/Desktop/Circuits/sevensegmentwclockflipflop/simulation/modelsim
 Esevensegmentwclockflipflop
-Z1 w1494500994
+Z1 w1494505159
 Z2 DPx9 cycloneiv 19 cycloneiv_atom_pack 0 22 M`jkZPRUXbi=80RI5E_ak1
 Z3 DPx9 cycloneiv 20 cycloneiv_components 0 22 <>9QKW;mkSlm0HPJL=UFk0
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8sevensegmentwclockflipflop_6_1200mv_85c_slow.vho
 Z11 Fsevensegmentwclockflipflop_6_1200mv_85c_slow.vho
 l0
 L37
-V1dM9[c@n]UeE7]fm1d9z;2
-!s100 IV[NFbHlZ703eEXOj3eNO2
+VJHTPJd<cG1kiAMY]_O5041
+!s100 6V]0IMFZgZ<X57Q:KLOcc1
 Z12 OV;C;10.3c;59
 31
-Z13 !s110 1494501020
+Z13 !s110 1494505259
 !i10b 1
-Z14 !s108 1494501020.247000
+Z14 !s108 1494505259.220000
 Z15 !s90 -reportprogress|300|-93|-work|work|sevensegmentwclockflipflop_6_1200mv_85c_slow.vho|
 Z16 !s107 sevensegmentwclockflipflop_6_1200mv_85c_slow.vho|
 !i113 1
@@ -44,11 +44,11 @@ R6
 R7
 R8
 R9
-DEx4 work 26 sevensegmentwclockflipflop 0 22 1dM9[c@n]UeE7]fm1d9z;2
-l108
+DEx4 work 26 sevensegmentwclockflipflop 0 22 JHTPJd<cG1kiAMY]_O5041
+l109
 L59
-VLQ0RPjCUee2]EM=25Fk<I1
-!s100 67JIP;Uh[ZT@PRFX:l;ed1
+VO^6L`Rbe?F7ZDYe^iho6z3
+!s100 gH:f_1mJ;zDakg21i@eaX1
 R12
 31
 R13
