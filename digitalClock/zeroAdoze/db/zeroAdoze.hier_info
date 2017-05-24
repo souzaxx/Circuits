@@ -1,0 +1,642 @@
+|zeroAdoze
+clock => counterffd:counter.clock
+habilita => counterffd:counter.habilita
+habilita => sete_segmentos:display1.habilita
+habilita => sete_segmentos:display2.habilita
+abcdefgFor1[0] <= sete_segmentos:display1.abcdefg[0]
+abcdefgFor1[1] <= sete_segmentos:display1.abcdefg[1]
+abcdefgFor1[2] <= sete_segmentos:display1.abcdefg[2]
+abcdefgFor1[3] <= sete_segmentos:display1.abcdefg[3]
+abcdefgFor1[4] <= sete_segmentos:display1.abcdefg[4]
+abcdefgFor1[5] <= sete_segmentos:display1.abcdefg[5]
+abcdefgFor1[6] <= sete_segmentos:display1.abcdefg[6]
+abcdefgFor2[0] <= sete_segmentos:display2.abcdefg[0]
+abcdefgFor2[1] <= sete_segmentos:display2.abcdefg[1]
+abcdefgFor2[2] <= sete_segmentos:display2.abcdefg[2]
+abcdefgFor2[3] <= sete_segmentos:display2.abcdefg[3]
+abcdefgFor2[4] <= sete_segmentos:display2.abcdefg[4]
+abcdefgFor2[5] <= sete_segmentos:display2.abcdefg[5]
+abcdefgFor2[6] <= sete_segmentos:display2.abcdefg[6]
+
+
+|zeroAdoze|counterFFD:counter
+clock => unidadecontadora:UNIDADE1.clock
+clock => unidadecontadora:UNIDADE2.clock
+clock => unidadecontadora:UNIDADE3.clock
+clock => unidadecontadora:UNIDADE4.clock
+reset => unidadecontadora:UNIDADE1.reset
+reset => unidadecontadora:UNIDADE2.reset
+reset => unidadecontadora:UNIDADE3.reset
+reset => unidadecontadora:UNIDADE4.reset
+habilita => unidadecontadora:UNIDADE1.habilita
+wxyz[0] <> unidadecontadora:UNIDADE1.Q
+wxyz[1] <> unidadecontadora:UNIDADE2.Q
+wxyz[2] <> unidadecontadora:UNIDADE3.Q
+wxyz[3] <> unidadecontadora:UNIDADE4.Q
+Cout <= unidadecontadora:UNIDADE4.Cout
+
+
+|zeroAdoze|counterFFD:counter|unidadeContadora:UNIDADE1
+clock => flipflopd:FFD1.clock
+reset => flipflopd:FFD1.reset
+habilita => XOR0.IN1
+habilita => Cout.IN1
+Q <> flipflopd:FFD1.Q
+Qn <> flipflopd:FFD1.nQ
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+D => Q~reg0.DATAIN
+Q <> Q~reg0
+nQ <> nQ
+
+
+|zeroAdoze|counterFFD:counter|unidadeContadora:UNIDADE2
+clock => flipflopd:FFD1.clock
+reset => flipflopd:FFD1.reset
+habilita => XOR0.IN1
+habilita => Cout.IN1
+Q <> flipflopd:FFD1.Q
+Qn <> flipflopd:FFD1.nQ
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+D => Q~reg0.DATAIN
+Q <> Q~reg0
+nQ <> nQ
+
+
+|zeroAdoze|counterFFD:counter|unidadeContadora:UNIDADE3
+clock => flipflopd:FFD1.clock
+reset => flipflopd:FFD1.reset
+habilita => XOR0.IN1
+habilita => Cout.IN1
+Q <> flipflopd:FFD1.Q
+Qn <> flipflopd:FFD1.nQ
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+D => Q~reg0.DATAIN
+Q <> Q~reg0
+nQ <> nQ
+
+
+|zeroAdoze|counterFFD:counter|unidadeContadora:UNIDADE4
+clock => flipflopd:FFD1.clock
+reset => flipflopd:FFD1.reset
+habilita => XOR0.IN1
+habilita => Cout.IN1
+Q <> flipflopd:FFD1.Q
+Qn <> flipflopd:FFD1.nQ
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+D => Q~reg0.DATAIN
+Q <> Q~reg0
+nQ <> nQ
+
+
+|zeroAdoze|resetador:reseter
+ABCD[0] => Equal0.IN3
+ABCD[1] => Equal0.IN2
+ABCD[2] => Equal0.IN1
+ABCD[3] => Equal0.IN0
+Value_set[0] => Equal0.IN7
+Value_set[1] => Equal0.IN6
+Value_set[2] => Equal0.IN5
+Value_set[3] => Equal0.IN4
+reset <> reset
+Cout <> <UNC>
+
+
+|zeroAdoze|MUXDOZE:mux
+wxyz1[0] <= wxyz1[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+wxyz1[1] <= wxyz1[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+wxyz1[2] <= wxyz1[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+wxyz1[3] <= wxyz1[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+wxyz2[0] <= wxyz2[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+wxyz2[1] <= wxyz2[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+wxyz2[2] <= wxyz2[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+wxyz2[3] <= wxyz2[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1
+ABCD[0] => not_1:C4.a
+ABCD[0] => and_2:C5.b
+ABCD[0] => and_2:C8.b
+ABCD[0] => and_3:C12.c
+ABCD[0] => or_3:C23.c
+ABCD[1] => not_1:C3.a
+ABCD[1] => and_2:C8.a
+ABCD[1] => and_2:C9.a
+ABCD[1] => and_2:C10.a
+ABCD[1] => and_2:C14.a
+ABCD[1] => and_2:C18.a
+ABCD[1] => and_2:C20.b
+ABCD[1] => or_4:C21.b
+ABCD[2] => not_1:C2.a
+ABCD[2] => and_2:C5.a
+ABCD[2] => and_3:C12.a
+ABCD[2] => and_2:C16.a
+ABCD[2] => and_2:C17.a
+ABCD[2] => and_2:C19.a
+ABCD[2] => or_3:C23.a
+ABCD[3] => not_1:C1.a
+ABCD[3] => or_4:C21.a
+ABCD[3] => or_5:C24.a
+ABCD[3] => or_4:C26.a
+ABCD[3] => or_4:C27.a
+habilita => and_2:C28.a
+habilita => and_2:C29.a
+habilita => and_2:C30.a
+habilita => and_2:C31.a
+habilita => and_2:C32.a
+habilita => and_2:C33.a
+habilita => and_2:C34.a
+abcdefg[0] <= and_2:C34.output
+abcdefg[1] <= and_2:C33.output
+abcdefg[2] <= and_2:C32.output
+abcdefg[3] <= and_2:C31.output
+abcdefg[4] <= and_2:C30.output
+abcdefg[5] <= and_2:C29.output
+abcdefg[6] <= and_2:C28.output
+
+
+|zeroAdoze|sete_segmentos:display1|not_1:C1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|not_1:C2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|not_1:C3
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|not_1:C4
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C5
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C6
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C7
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C8
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C9
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C10
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C11
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_3:C12
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C13
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C14
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C15
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C16
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C17
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C18
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C19
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C20
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|or_4:C21
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|or_3:C22
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|or_3:C23
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|or_5:C24
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+e => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|or_2:C25
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|or_4:C26
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|or_4:C27
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C28
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C29
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C30
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C31
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C32
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C33
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display1|and_2:C34
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2
+ABCD[0] => not_1:C4.a
+ABCD[0] => and_2:C5.b
+ABCD[0] => and_2:C8.b
+ABCD[0] => and_3:C12.c
+ABCD[0] => or_3:C23.c
+ABCD[1] => not_1:C3.a
+ABCD[1] => and_2:C8.a
+ABCD[1] => and_2:C9.a
+ABCD[1] => and_2:C10.a
+ABCD[1] => and_2:C14.a
+ABCD[1] => and_2:C18.a
+ABCD[1] => and_2:C20.b
+ABCD[1] => or_4:C21.b
+ABCD[2] => not_1:C2.a
+ABCD[2] => and_2:C5.a
+ABCD[2] => and_3:C12.a
+ABCD[2] => and_2:C16.a
+ABCD[2] => and_2:C17.a
+ABCD[2] => and_2:C19.a
+ABCD[2] => or_3:C23.a
+ABCD[3] => not_1:C1.a
+ABCD[3] => or_4:C21.a
+ABCD[3] => or_5:C24.a
+ABCD[3] => or_4:C26.a
+ABCD[3] => or_4:C27.a
+habilita => and_2:C28.a
+habilita => and_2:C29.a
+habilita => and_2:C30.a
+habilita => and_2:C31.a
+habilita => and_2:C32.a
+habilita => and_2:C33.a
+habilita => and_2:C34.a
+abcdefg[0] <= and_2:C34.output
+abcdefg[1] <= and_2:C33.output
+abcdefg[2] <= and_2:C32.output
+abcdefg[3] <= and_2:C31.output
+abcdefg[4] <= and_2:C30.output
+abcdefg[5] <= and_2:C29.output
+abcdefg[6] <= and_2:C28.output
+
+
+|zeroAdoze|sete_segmentos:display2|not_1:C1
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|not_1:C2
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|not_1:C3
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|not_1:C4
+a => output.DATAIN
+output <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C5
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C6
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C7
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C8
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C9
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C10
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C11
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_3:C12
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C13
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C14
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C15
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C16
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C17
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C18
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C19
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C20
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|or_4:C21
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|or_3:C22
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|or_3:C23
+a => output.IN0
+b => output.IN1
+c => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|or_5:C24
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+e => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|or_2:C25
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|or_4:C26
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|or_4:C27
+a => output.IN0
+b => output.IN1
+c => output.IN1
+d => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C28
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C29
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C30
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C31
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C32
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C33
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroAdoze|sete_segmentos:display2|and_2:C34
+a => output.IN0
+b => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

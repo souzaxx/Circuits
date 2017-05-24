@@ -3,19 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -0.350
-TNS   : -0.459
+Slack : -0.349
+TNS   : -0.387
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
 Slack : 0.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'clock'
-Slack : -0.905
-TNS   : -3.620
+Slack : -0.846
+TNS   : -3.384
 
 Type  : Slow 1200mV 85C Model Removal 'clock'
-Slack : 1.228
+Slack : 1.203
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
@@ -23,19 +23,19 @@ Slack : -3.000
 TNS   : -7.000
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -0.204
-TNS   : -0.204
+Slack : -0.202
+TNS   : -0.202
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
 Slack : 0.310
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'clock'
-Slack : -0.705
-TNS   : -2.820
+Slack : -0.652
+TNS   : -2.608
 
 Type  : Slow 1200mV 0C Model Removal 'clock'
-Slack : 1.101
+Slack : 1.081
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
@@ -43,7 +43,7 @@ Slack : -3.000
 TNS   : -7.000
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : 0.240
+Slack : 0.244
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
@@ -51,11 +51,11 @@ Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'clock'
-Slack : -0.078
-TNS   : -0.312
+Slack : -0.044
+TNS   : -0.176
 
 Type  : Fast 1200mV 0C Model Removal 'clock'
-Slack : 0.685
+Slack : 0.665
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'

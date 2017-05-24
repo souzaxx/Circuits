@@ -1,0 +1,83 @@
+# Reading C:/altera/14.1/modelsim_ase/tcl/vsim/pref.tcl
+# do zeroAdoze_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
+# vmap -modelsim_quiet work gate_work 
+# Copying C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {zeroAdoze_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 09:12:49 on May 24,2017
+# vcom -reportprogress 300 -93 -work work zeroAdoze_6_1200mv_85c_slow.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneiv_atom_pack
+# -- Loading package cycloneiv_components
+# -- Compiling entity zeroAdoze
+# -- Compiling architecture structure of zeroAdoze
+# End time: 09:12:52 on May 24,2017, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# 
+vsim work.zeroadoze
+# vsim -gui "+altera" -l msim_transcript -do "zeroAdoze_run_msim_gate_vhdl.do" 
+# Start time: 09:13:14 on May 24,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneiv.cycloneiv_atom_pack(body)
+# Loading cycloneiv.cycloneiv_components
+# Loading work.zeroadoze(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiv.cycloneiv_io_obuf(arch)
+# Loading cycloneiv.cycloneiv_io_ibuf(arch)
+# Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cycloneiv.cycloneiv_clkctrl(vital_clkctrl)
+# Loading cycloneiv.cycloneiv_ena_reg(behave)
+add wave -position end  sim:/zeroadoze/clock
+add wave -position end  sim:/zeroadoze/habilita
+add wave -position end  sim:/zeroadoze/abcdefgFor1
+add wave -position end  sim:/zeroadoze/abcdefgFor2
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: User  Hostname: WIN-MKE0A91S26G  ProcessID: 1724
+# 
+#           Attempting to use alternate WLF file "./wlftt4cw18".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftt4cw18
+# 
+force -freeze sim:/zeroadoze/habilita 1 0
+force -freeze sim:/zeroadoze/clock 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 09:14:54 on May 24,2017, Elapsed time: 0:01:40
+# Errors: 0, Warnings: 2

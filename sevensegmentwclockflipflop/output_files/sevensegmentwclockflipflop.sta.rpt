@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for sevensegmentwclockflipflop
-Thu May 11 09:19:17 2017
+Fri May 12 07:48:11 2017
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -133,7 +133,7 @@ agreement for further details.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 740.74 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 741.29 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -149,7 +149,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; clock ; -0.350 ; -0.459             ;
+; clock ; -0.349 ; -0.387             ;
 +-------+--------+--------------------+
 
 
@@ -167,7 +167,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clock ; -0.905 ; -3.620                ;
+; clock ; -0.846 ; -3.384                ;
 +-------+--------+-----------------------+
 
 
@@ -176,7 +176,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clock ; 1.228 ; 0.000                 ;
+; clock ; 1.203 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -194,12 +194,12 @@ HTML report is unavailable in plain text report export.
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.350 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.280      ;
-; -0.305 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.235      ;
-; -0.111 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.041      ;
-; -0.109 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.039      ;
+; -0.349 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.279      ;
+; -0.236 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.166      ;
+; -0.117 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.047      ;
+; -0.038 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 0.968      ;
+; 0.194  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 0.736      ;
 ; 0.195  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 0.735      ;
-; 0.197  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 0.733      ;
 ; 0.271  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 0.659      ;
 ; 0.271  ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 0.659      ;
 ; 0.271  ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 0.659      ;
@@ -216,12 +216,12 @@ HTML report is unavailable in plain text report export.
 ; 0.355 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.577      ;
 ; 0.355 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.577      ;
 ; 0.355 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.577      ;
-; 0.403 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.625      ;
-; 0.405 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.627      ;
-; 0.627 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.849      ;
-; 0.696 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.918      ;
-; 0.834 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.056      ;
-; 0.892 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.114      ;
+; 0.404 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.626      ;
+; 0.405 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.627      ;
+; 0.588 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.810      ;
+; 0.700 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.922      ;
+; 0.795 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.017      ;
+; 0.880 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.102      ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -230,22 +230,22 @@ HTML report is unavailable in plain text report export.
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.905 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.835      ;
-; -0.905 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.835      ;
-; -0.905 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.835      ;
-; -0.905 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.835      ;
-; -0.873 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.803      ;
-; -0.873 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.803      ;
-; -0.873 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.803      ;
-; -0.873 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.803      ;
-; -0.840 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.770      ;
-; -0.840 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.770      ;
-; -0.840 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.770      ;
-; -0.840 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.770      ;
-; -0.627 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.557      ;
-; -0.627 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.557      ;
-; -0.627 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.557      ;
-; -0.627 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.557      ;
+; -0.846 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.776      ;
+; -0.846 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.776      ;
+; -0.846 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.776      ;
+; -0.846 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.776      ;
+; -0.823 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.753      ;
+; -0.823 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.753      ;
+; -0.823 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.753      ;
+; -0.823 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.753      ;
+; -0.760 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.690      ;
+; -0.760 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.690      ;
+; -0.760 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.690      ;
+; -0.760 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.690      ;
+; -0.646 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.576      ;
+; -0.646 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.576      ;
+; -0.646 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.576      ;
+; -0.646 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.065     ; 1.576      ;
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -254,22 +254,22 @@ HTML report is unavailable in plain text report export.
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 1.228 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.450      ;
-; 1.228 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.450      ;
-; 1.228 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.450      ;
-; 1.228 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.450      ;
-; 1.346 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.568      ;
-; 1.346 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.568      ;
-; 1.346 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.568      ;
-; 1.346 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.568      ;
-; 1.421 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.643      ;
-; 1.421 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.643      ;
-; 1.421 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.643      ;
-; 1.421 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.643      ;
-; 1.507 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.729      ;
-; 1.507 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.729      ;
-; 1.507 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.729      ;
-; 1.507 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.729      ;
+; 1.203 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.425      ;
+; 1.203 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.425      ;
+; 1.203 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.425      ;
+; 1.203 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.425      ;
+; 1.295 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.517      ;
+; 1.295 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.517      ;
+; 1.295 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.517      ;
+; 1.295 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.517      ;
+; 1.428 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.650      ;
+; 1.428 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.650      ;
+; 1.428 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.650      ;
+; 1.428 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.650      ;
+; 1.436 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.658      ;
+; 1.436 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.658      ;
+; 1.436 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.658      ;
+; 1.436 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 1.658      ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -315,7 +315,7 @@ HTML report is unavailable in plain text report export.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; habilita  ; clock      ; 2.222 ; 2.672 ; Rise       ; clock           ;
+; habilita  ; clock      ; 2.095 ; 2.584 ; Rise       ; clock           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -324,7 +324,7 @@ HTML report is unavailable in plain text report export.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; habilita  ; clock      ; -1.382 ; -1.808 ; Rise       ; clock           ;
+; habilita  ; clock      ; -1.383 ; -1.833 ; Rise       ; clock           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -333,15 +333,15 @@ HTML report is unavailable in plain text report export.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; abcdefg[*]  ; clock      ; 8.132 ; 8.046 ; Rise       ; clock           ;
-;  abcdefg[0] ; clock      ; 6.838 ; 6.764 ; Rise       ; clock           ;
-;  abcdefg[1] ; clock      ; 7.242 ; 7.183 ; Rise       ; clock           ;
-;  abcdefg[2] ; clock      ; 6.884 ; 6.701 ; Rise       ; clock           ;
-;  abcdefg[3] ; clock      ; 8.132 ; 8.046 ; Rise       ; clock           ;
-;  abcdefg[4] ; clock      ; 6.789 ; 6.736 ; Rise       ; clock           ;
-;  abcdefg[5] ; clock      ; 6.550 ; 6.441 ; Rise       ; clock           ;
-;  abcdefg[6] ; clock      ; 6.851 ; 6.765 ; Rise       ; clock           ;
-; reset       ; clock      ; 6.401 ; 6.602 ; Rise       ; clock           ;
+; abcdefg[*]  ; clock      ; 8.199 ; 8.175 ; Rise       ; clock           ;
+;  abcdefg[0] ; clock      ; 8.199 ; 8.175 ; Rise       ; clock           ;
+;  abcdefg[1] ; clock      ; 7.716 ; 7.530 ; Rise       ; clock           ;
+;  abcdefg[2] ; clock      ; 6.651 ; 6.572 ; Rise       ; clock           ;
+;  abcdefg[3] ; clock      ; 7.287 ; 7.223 ; Rise       ; clock           ;
+;  abcdefg[4] ; clock      ; 7.100 ; 6.906 ; Rise       ; clock           ;
+;  abcdefg[5] ; clock      ; 7.085 ; 6.951 ; Rise       ; clock           ;
+;  abcdefg[6] ; clock      ; 7.974 ; 8.025 ; Rise       ; clock           ;
+; reset       ; clock      ; 6.135 ; 6.342 ; Rise       ; clock           ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -350,15 +350,15 @@ HTML report is unavailable in plain text report export.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; abcdefg[*]  ; clock      ; 5.969 ; 5.866 ; Rise       ; clock           ;
-;  abcdefg[0] ; clock      ; 6.373 ; 6.231 ; Rise       ; clock           ;
-;  abcdefg[1] ; clock      ; 6.761 ; 6.652 ; Rise       ; clock           ;
-;  abcdefg[2] ; clock      ; 6.273 ; 6.179 ; Rise       ; clock           ;
-;  abcdefg[3] ; clock      ; 6.921 ; 6.909 ; Rise       ; clock           ;
-;  abcdefg[4] ; clock      ; 6.316 ; 6.152 ; Rise       ; clock           ;
-;  abcdefg[5] ; clock      ; 5.969 ; 5.866 ; Rise       ; clock           ;
-;  abcdefg[6] ; clock      ; 6.398 ; 6.261 ; Rise       ; clock           ;
-; reset       ; clock      ; 5.910 ; 6.120 ; Rise       ; clock           ;
+; abcdefg[*]  ; clock      ; 6.271 ; 6.091 ; Rise       ; clock           ;
+;  abcdefg[0] ; clock      ; 7.654 ; 7.579 ; Rise       ; clock           ;
+;  abcdefg[1] ; clock      ; 7.138 ; 7.034 ; Rise       ; clock           ;
+;  abcdefg[2] ; clock      ; 6.271 ; 6.091 ; Rise       ; clock           ;
+;  abcdefg[3] ; clock      ; 6.604 ; 6.547 ; Rise       ; clock           ;
+;  abcdefg[4] ; clock      ; 6.557 ; 6.461 ; Rise       ; clock           ;
+;  abcdefg[5] ; clock      ; 6.581 ; 6.432 ; Rise       ; clock           ;
+;  abcdefg[6] ; clock      ; 7.488 ; 7.432 ; Rise       ; clock           ;
+; reset       ; clock      ; 5.786 ; 5.854 ; Rise       ; clock           ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -367,13 +367,13 @@ HTML report is unavailable in plain text report export.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; habilita   ; abcdefg[0]  ; 7.046 ;    ;    ; 7.374 ;
-; habilita   ; abcdefg[1]  ; 7.344 ;    ;    ; 7.660 ;
-; habilita   ; abcdefg[2]  ; 7.290 ;    ;    ; 7.590 ;
-; habilita   ; abcdefg[3]  ; 8.538 ;    ;    ; 8.935 ;
-; habilita   ; abcdefg[4]  ; 7.293 ;    ;    ; 7.593 ;
-; habilita   ; abcdefg[5]  ; 6.991 ;    ;    ; 7.304 ;
-; habilita   ; abcdefg[6]  ; 6.944 ;    ;    ; 7.269 ;
+; habilita   ; abcdefg[0]  ; 8.182 ;    ;    ; 8.569 ;
+; habilita   ; abcdefg[1]  ; 7.233 ;    ;    ; 7.504 ;
+; habilita   ; abcdefg[2]  ; 7.026 ;    ;    ; 7.354 ;
+; habilita   ; abcdefg[3]  ; 7.662 ;    ;    ; 8.005 ;
+; habilita   ; abcdefg[4]  ; 7.375 ;    ;    ; 7.705 ;
+; habilita   ; abcdefg[5]  ; 7.396 ;    ;    ; 7.711 ;
+; habilita   ; abcdefg[6]  ; 7.563 ;    ;    ; 7.911 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -382,13 +382,13 @@ HTML report is unavailable in plain text report export.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; habilita   ; abcdefg[0]  ; 6.799 ;    ;    ; 7.105 ;
-; habilita   ; abcdefg[1]  ; 7.097 ;    ;    ; 7.403 ;
-; habilita   ; abcdefg[2]  ; 7.048 ;    ;    ; 7.339 ;
-; habilita   ; abcdefg[3]  ; 7.597 ;    ;    ; 7.955 ;
-; habilita   ; abcdefg[4]  ; 7.052 ;    ;    ; 7.341 ;
-; habilita   ; abcdefg[5]  ; 6.758 ;    ;    ; 7.060 ;
-; habilita   ; abcdefg[6]  ; 6.717 ;    ;    ; 7.031 ;
+; habilita   ; abcdefg[0]  ; 7.934 ;    ;    ; 8.312 ;
+; habilita   ; abcdefg[1]  ; 6.994 ;    ;    ; 7.256 ;
+; habilita   ; abcdefg[2]  ; 6.792 ;    ;    ; 7.111 ;
+; habilita   ; abcdefg[3]  ; 7.113 ;    ;    ; 7.455 ;
+; habilita   ; abcdefg[4]  ; 7.124 ;    ;    ; 7.445 ;
+; habilita   ; abcdefg[5]  ; 7.147 ;    ;    ; 7.454 ;
+; habilita   ; abcdefg[6]  ; 7.341 ;    ;    ; 7.680 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -403,7 +403,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 830.56 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 831.95 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -413,7 +413,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clock ; -0.204 ; -0.204            ;
+; clock ; -0.202 ; -0.202            ;
 +-------+--------+-------------------+
 
 
@@ -431,7 +431,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; clock ; -0.705 ; -2.820               ;
+; clock ; -0.652 ; -2.608               ;
 +-------+--------+----------------------+
 
 
@@ -440,7 +440,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clock ; 1.101 ; 0.000                ;
+; clock ; 1.081 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -458,12 +458,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.204 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.142      ;
-; -0.166 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.104      ;
-; 0.008  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 0.930      ;
-; 0.015  ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 0.923      ;
+; -0.202 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.140      ;
+; -0.108 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.046      ;
+; 0.002  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 0.936      ;
+; 0.075  ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 0.863      ;
+; 0.277  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 0.661      ;
 ; 0.278  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 0.660      ;
-; 0.280  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 0.658      ;
 ; 0.355  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 0.583      ;
 ; 0.355  ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 0.583      ;
 ; 0.355  ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 0.583      ;
@@ -480,12 +480,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.310 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.511      ;
 ; 0.310 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.511      ;
 ; 0.310 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.511      ;
-; 0.361 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.562      ;
-; 0.362 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.563      ;
-; 0.571 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.772      ;
-; 0.627 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.828      ;
-; 0.756 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.957      ;
-; 0.802 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.003      ;
+; 0.361 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.562      ;
+; 0.362 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.563      ;
+; 0.531 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.732      ;
+; 0.631 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.832      ;
+; 0.716 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.917      ;
+; 0.792 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 0.993      ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -494,22 +494,22 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.705 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.643      ;
-; -0.705 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.643      ;
-; -0.705 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.643      ;
-; -0.705 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.643      ;
-; -0.674 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.612      ;
-; -0.674 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.612      ;
-; -0.674 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.612      ;
-; -0.674 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.612      ;
-; -0.648 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.586      ;
-; -0.648 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.586      ;
-; -0.648 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.586      ;
-; -0.648 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.586      ;
-; -0.459 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.397      ;
-; -0.459 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.397      ;
-; -0.459 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.397      ;
-; -0.459 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.397      ;
+; -0.652 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.590      ;
+; -0.652 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.590      ;
+; -0.652 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.590      ;
+; -0.652 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.590      ;
+; -0.630 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.568      ;
+; -0.630 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.568      ;
+; -0.630 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.568      ;
+; -0.630 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.568      ;
+; -0.578 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.516      ;
+; -0.578 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.516      ;
+; -0.578 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.516      ;
+; -0.578 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.516      ;
+; -0.473 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.411      ;
+; -0.473 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.411      ;
+; -0.473 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.411      ;
+; -0.473 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.057     ; 1.411      ;
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -518,22 +518,22 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 1.101 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.302      ;
-; 1.101 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.302      ;
-; 1.101 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.302      ;
-; 1.101 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.302      ;
-; 1.214 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.415      ;
-; 1.214 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.415      ;
-; 1.214 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.415      ;
-; 1.214 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.415      ;
-; 1.278 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.479      ;
-; 1.278 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.479      ;
-; 1.278 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.479      ;
-; 1.278 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.479      ;
-; 1.354 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.555      ;
-; 1.354 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.555      ;
-; 1.354 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.555      ;
-; 1.354 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.555      ;
+; 1.081 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.282      ;
+; 1.081 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.282      ;
+; 1.081 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.282      ;
+; 1.081 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.282      ;
+; 1.164 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.365      ;
+; 1.164 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.365      ;
+; 1.164 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.365      ;
+; 1.164 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.365      ;
+; 1.284 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.485      ;
+; 1.284 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.485      ;
+; 1.284 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.485      ;
+; 1.284 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.485      ;
+; 1.294 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.495      ;
+; 1.294 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.495      ;
+; 1.294 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.495      ;
+; 1.294 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.057      ; 1.495      ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -579,7 +579,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; habilita  ; clock      ; 1.906 ; 2.263 ; Rise       ; clock           ;
+; habilita  ; clock      ; 1.786 ; 2.184 ; Rise       ; clock           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -588,7 +588,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; habilita  ; clock      ; -1.158 ; -1.491 ; Rise       ; clock           ;
+; habilita  ; clock      ; -1.152 ; -1.514 ; Rise       ; clock           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -597,15 +597,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; abcdefg[*]  ; clock      ; 7.233 ; 7.162 ; Rise       ; clock           ;
-;  abcdefg[0] ; clock      ; 6.160 ; 6.020 ; Rise       ; clock           ;
-;  abcdefg[1] ; clock      ; 6.503 ; 6.404 ; Rise       ; clock           ;
-;  abcdefg[2] ; clock      ; 6.164 ; 5.995 ; Rise       ; clock           ;
-;  abcdefg[3] ; clock      ; 7.233 ; 7.162 ; Rise       ; clock           ;
-;  abcdefg[4] ; clock      ; 6.124 ; 5.991 ; Rise       ; clock           ;
-;  abcdefg[5] ; clock      ; 5.836 ; 5.733 ; Rise       ; clock           ;
-;  abcdefg[6] ; clock      ; 6.176 ; 6.023 ; Rise       ; clock           ;
-; reset       ; clock      ; 5.708 ; 5.926 ; Rise       ; clock           ;
+; abcdefg[*]  ; clock      ; 7.304 ; 7.250 ; Rise       ; clock           ;
+;  abcdefg[0] ; clock      ; 7.304 ; 7.250 ; Rise       ; clock           ;
+;  abcdefg[1] ; clock      ; 6.924 ; 6.733 ; Rise       ; clock           ;
+;  abcdefg[2] ; clock      ; 5.985 ; 5.846 ; Rise       ; clock           ;
+;  abcdefg[3] ; clock      ; 6.568 ; 6.428 ; Rise       ; clock           ;
+;  abcdefg[4] ; clock      ; 6.346 ; 6.185 ; Rise       ; clock           ;
+;  abcdefg[5] ; clock      ; 6.350 ; 6.180 ; Rise       ; clock           ;
+;  abcdefg[6] ; clock      ; 7.126 ; 7.117 ; Rise       ; clock           ;
+; reset       ; clock      ; 5.476 ; 5.680 ; Rise       ; clock           ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -614,15 +614,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; abcdefg[*]  ; clock      ; 5.330 ; 5.240 ; Rise       ; clock           ;
-;  abcdefg[0] ; clock      ; 5.739 ; 5.563 ; Rise       ; clock           ;
-;  abcdefg[1] ; clock      ; 6.077 ; 5.936 ; Rise       ; clock           ;
-;  abcdefg[2] ; clock      ; 5.638 ; 5.515 ; Rise       ; clock           ;
-;  abcdefg[3] ; clock      ; 6.165 ; 6.123 ; Rise       ; clock           ;
-;  abcdefg[4] ; clock      ; 5.687 ; 5.490 ; Rise       ; clock           ;
-;  abcdefg[5] ; clock      ; 5.330 ; 5.240 ; Rise       ; clock           ;
-;  abcdefg[6] ; clock      ; 5.764 ; 5.591 ; Rise       ; clock           ;
-; reset       ; clock      ; 5.265 ; 5.494 ; Rise       ; clock           ;
+; abcdefg[*]  ; clock      ; 5.620 ; 5.444 ; Rise       ; clock           ;
+;  abcdefg[0] ; clock      ; 6.847 ; 6.746 ; Rise       ; clock           ;
+;  abcdefg[1] ; clock      ; 6.438 ; 6.266 ; Rise       ; clock           ;
+;  abcdefg[2] ; clock      ; 5.620 ; 5.444 ; Rise       ; clock           ;
+;  abcdefg[3] ; clock      ; 5.950 ; 5.826 ; Rise       ; clock           ;
+;  abcdefg[4] ; clock      ; 5.889 ; 5.760 ; Rise       ; clock           ;
+;  abcdefg[5] ; clock      ; 5.920 ; 5.746 ; Rise       ; clock           ;
+;  abcdefg[6] ; clock      ; 6.691 ; 6.614 ; Rise       ; clock           ;
+; reset       ; clock      ; 5.150 ; 5.251 ; Rise       ; clock           ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -631,13 +631,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; habilita   ; abcdefg[0]  ; 6.231 ;    ;    ; 6.447 ;
-; habilita   ; abcdefg[1]  ; 6.487 ;    ;    ; 6.717 ;
-; habilita   ; abcdefg[2]  ; 6.462 ;    ;    ; 6.638 ;
-; habilita   ; abcdefg[3]  ; 7.531 ;    ;    ; 7.805 ;
-; habilita   ; abcdefg[4]  ; 6.474 ;    ;    ; 6.639 ;
-; habilita   ; abcdefg[5]  ; 6.161 ;    ;    ; 6.385 ;
-; habilita   ; abcdefg[6]  ; 6.140 ;    ;    ; 6.360 ;
+; habilita   ; abcdefg[0]  ; 7.208 ;    ;    ; 7.497 ;
+; habilita   ; abcdefg[1]  ; 6.404 ;    ;    ; 6.563 ;
+; habilita   ; abcdefg[2]  ; 6.210 ;    ;    ; 6.438 ;
+; habilita   ; abcdefg[3]  ; 6.793 ;    ;    ; 7.020 ;
+; habilita   ; abcdefg[4]  ; 6.516 ;    ;    ; 6.755 ;
+; habilita   ; abcdefg[5]  ; 6.552 ;    ;    ; 6.752 ;
+; habilita   ; abcdefg[6]  ; 6.637 ;    ;    ; 6.904 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -646,13 +646,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; habilita   ; abcdefg[0]  ; 6.010 ;    ;    ; 6.210 ;
-; habilita   ; abcdefg[1]  ; 6.267 ;    ;    ; 6.491 ;
-; habilita   ; abcdefg[2]  ; 6.247 ;    ;    ; 6.419 ;
-; habilita   ; abcdefg[3]  ; 6.678 ;    ;    ; 6.941 ;
-; habilita   ; abcdefg[4]  ; 6.258 ;    ;    ; 6.420 ;
-; habilita   ; abcdefg[5]  ; 5.954 ;    ;    ; 6.173 ;
-; habilita   ; abcdefg[6]  ; 5.937 ;    ;    ; 6.150 ;
+; habilita   ; abcdefg[0]  ; 6.988 ;    ;    ; 7.270 ;
+; habilita   ; abcdefg[1]  ; 6.192 ;    ;    ; 6.346 ;
+; habilita   ; abcdefg[2]  ; 6.003 ;    ;    ; 6.224 ;
+; habilita   ; abcdefg[3]  ; 6.296 ;    ;    ; 6.522 ;
+; habilita   ; abcdefg[4]  ; 6.292 ;    ;    ; 6.526 ;
+; habilita   ; abcdefg[5]  ; 6.331 ;    ;    ; 6.526 ;
+; habilita   ; abcdefg[6]  ; 6.440 ;    ;    ; 6.702 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -667,7 +667,7 @@ No synchronizer chains to report.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clock ; 0.240 ; 0.000              ;
+; clock ; 0.244 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -685,7 +685,7 @@ No synchronizer chains to report.
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; clock ; -0.078 ; -0.312               ;
+; clock ; -0.044 ; -0.176               ;
 +-------+--------+----------------------+
 
 
@@ -694,7 +694,7 @@ No synchronizer chains to report.
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clock ; 0.685 ; 0.000                ;
+; clock ; 0.665 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -712,12 +712,12 @@ No synchronizer chains to report.
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.240 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.710      ;
-; 0.271 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.679      ;
-; 0.371 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.579      ;
-; 0.379 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.571      ;
-; 0.548 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.402      ;
-; 0.550 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.400      ;
+; 0.244 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.706      ;
+; 0.312 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.638      ;
+; 0.374 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.576      ;
+; 0.417 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.533      ;
+; 0.547 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.403      ;
+; 0.549 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.401      ;
 ; 0.591 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.359      ;
 ; 0.591 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.359      ;
 ; 0.591 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.359      ;
@@ -734,12 +734,12 @@ No synchronizer chains to report.
 ; 0.186 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.186 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.186 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.307      ;
-; 0.215 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.336      ;
 ; 0.216 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.337      ;
-; 0.349 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.470      ;
-; 0.367 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.488      ;
-; 0.452 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.573      ;
-; 0.479 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.600      ;
+; 0.217 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.338      ;
+; 0.318 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.439      ;
+; 0.370 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.491      ;
+; 0.423 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.544      ;
+; 0.472 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.593      ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -748,22 +748,22 @@ No synchronizer chains to report.
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.078 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 1.028      ;
-; -0.078 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 1.028      ;
-; -0.078 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 1.028      ;
-; -0.078 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 1.028      ;
-; -0.058 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 1.008      ;
-; -0.058 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 1.008      ;
-; -0.058 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 1.008      ;
-; -0.058 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 1.008      ;
-; -0.041 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.991      ;
-; -0.041 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.991      ;
-; -0.041 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.991      ;
-; -0.041 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.991      ;
-; 0.086  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.864      ;
-; 0.086  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.864      ;
-; 0.086  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.864      ;
-; 0.086  ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.864      ;
+; -0.044 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.994      ;
+; -0.044 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.994      ;
+; -0.044 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.994      ;
+; -0.044 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.994      ;
+; -0.027 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.977      ;
+; -0.027 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.977      ;
+; -0.027 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.977      ;
+; -0.027 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.977      ;
+; 0.009  ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.941      ;
+; 0.009  ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.941      ;
+; 0.009  ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.941      ;
+; 0.009  ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.941      ;
+; 0.067  ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.883      ;
+; 0.067  ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.883      ;
+; 0.067  ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.883      ;
+; 0.067  ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 0.883      ;
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -772,22 +772,22 @@ No synchronizer chains to report.
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.685 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.806      ;
-; 0.685 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.806      ;
-; 0.685 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.806      ;
-; 0.685 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.806      ;
-; 0.750 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.871      ;
-; 0.750 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.871      ;
-; 0.750 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.871      ;
-; 0.750 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.871      ;
-; 0.786 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.907      ;
-; 0.786 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.907      ;
-; 0.786 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.907      ;
-; 0.786 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.907      ;
-; 0.838 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.959      ;
-; 0.838 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.959      ;
-; 0.838 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.959      ;
-; 0.838 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.959      ;
+; 0.665 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.786      ;
+; 0.665 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.786      ;
+; 0.665 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.786      ;
+; 0.665 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.786      ;
+; 0.716 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.837      ;
+; 0.716 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.837      ;
+; 0.716 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.837      ;
+; 0.716 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.837      ;
+; 0.793 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.914      ;
+; 0.793 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.914      ;
+; 0.793 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.914      ;
+; 0.793 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.914      ;
+; 0.798 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE4|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.919      ;
+; 0.798 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.919      ;
+; 0.798 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE2|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.919      ;
+; 0.798 ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ; counterFFD:counter|unidadeContadora:UNIDADE3|FlipFlopD:FFD1|Q~reg0 ; clock        ; clock       ; 0.000        ; 0.037      ; 0.919      ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -833,7 +833,7 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; habilita  ; clock      ; 1.233 ; 1.824 ; Rise       ; clock           ;
+; habilita  ; clock      ; 1.165 ; 1.775 ; Rise       ; clock           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -842,7 +842,7 @@ No synchronizer chains to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; habilita  ; clock      ; -0.770 ; -1.341 ; Rise       ; clock           ;
+; habilita  ; clock      ; -0.769 ; -1.346 ; Rise       ; clock           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -851,15 +851,15 @@ No synchronizer chains to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; abcdefg[*]  ; clock      ; 4.837 ; 4.809 ; Rise       ; clock           ;
-;  abcdefg[0] ; clock      ; 3.927 ; 3.997 ; Rise       ; clock           ;
-;  abcdefg[1] ; clock      ; 4.173 ; 4.247 ; Rise       ; clock           ;
-;  abcdefg[2] ; clock      ; 4.005 ; 3.944 ; Rise       ; clock           ;
-;  abcdefg[3] ; clock      ; 4.837 ; 4.809 ; Rise       ; clock           ;
-;  abcdefg[4] ; clock      ; 3.899 ; 4.001 ; Rise       ; clock           ;
-;  abcdefg[5] ; clock      ; 3.811 ; 3.808 ; Rise       ; clock           ;
-;  abcdefg[6] ; clock      ; 3.926 ; 3.995 ; Rise       ; clock           ;
-; reset       ; clock      ; 3.799 ; 3.832 ; Rise       ; clock           ;
+; abcdefg[*]  ; clock      ; 4.876 ; 4.943 ; Rise       ; clock           ;
+;  abcdefg[0] ; clock      ; 4.876 ; 4.943 ; Rise       ; clock           ;
+;  abcdefg[1] ; clock      ; 4.433 ; 4.401 ; Rise       ; clock           ;
+;  abcdefg[2] ; clock      ; 3.827 ; 3.900 ; Rise       ; clock           ;
+;  abcdefg[3] ; clock      ; 4.178 ; 4.266 ; Rise       ; clock           ;
+;  abcdefg[4] ; clock      ; 4.115 ; 4.053 ; Rise       ; clock           ;
+;  abcdefg[5] ; clock      ; 4.104 ; 4.125 ; Rise       ; clock           ;
+;  abcdefg[6] ; clock      ; 4.705 ; 4.834 ; Rise       ; clock           ;
+; reset       ; clock      ; 3.638 ; 3.691 ; Rise       ; clock           ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -868,15 +868,15 @@ No synchronizer chains to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; abcdefg[*]  ; clock      ; 3.469 ; 3.465 ; Rise       ; clock           ;
-;  abcdefg[0] ; clock      ; 3.659 ; 3.679 ; Rise       ; clock           ;
-;  abcdefg[1] ; clock      ; 3.878 ; 3.942 ; Rise       ; clock           ;
-;  abcdefg[2] ; clock      ; 3.643 ; 3.662 ; Rise       ; clock           ;
-;  abcdefg[3] ; clock      ; 4.142 ; 4.196 ; Rise       ; clock           ;
-;  abcdefg[4] ; clock      ; 3.643 ; 3.654 ; Rise       ; clock           ;
-;  abcdefg[5] ; clock      ; 3.469 ; 3.465 ; Rise       ; clock           ;
-;  abcdefg[6] ; clock      ; 3.666 ; 3.692 ; Rise       ; clock           ;
-; reset       ; clock      ; 3.514 ; 3.547 ; Rise       ; clock           ;
+; abcdefg[*]  ; clock      ; 3.645 ; 3.589 ; Rise       ; clock           ;
+;  abcdefg[0] ; clock      ; 4.524 ; 4.569 ; Rise       ; clock           ;
+;  abcdefg[1] ; clock      ; 4.065 ; 4.132 ; Rise       ; clock           ;
+;  abcdefg[2] ; clock      ; 3.645 ; 3.589 ; Rise       ; clock           ;
+;  abcdefg[3] ; clock      ; 3.786 ; 3.862 ; Rise       ; clock           ;
+;  abcdefg[4] ; clock      ; 3.765 ; 3.837 ; Rise       ; clock           ;
+;  abcdefg[5] ; clock      ; 3.784 ; 3.794 ; Rise       ; clock           ;
+;  abcdefg[6] ; clock      ; 4.425 ; 4.461 ; Rise       ; clock           ;
+; reset       ; clock      ; 3.441 ; 3.401 ; Rise       ; clock           ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -885,13 +885,13 @@ No synchronizer chains to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; habilita   ; abcdefg[0]  ; 4.088 ;    ;    ; 4.669 ;
-; habilita   ; abcdefg[1]  ; 4.256 ;    ;    ; 4.833 ;
-; habilita   ; abcdefg[2]  ; 4.221 ;    ;    ; 4.807 ;
-; habilita   ; abcdefg[3]  ; 5.053 ;    ;    ; 5.672 ;
-; habilita   ; abcdefg[4]  ; 4.212 ;    ;    ; 4.804 ;
-; habilita   ; abcdefg[5]  ; 4.049 ;    ;    ; 4.613 ;
-; habilita   ; abcdefg[6]  ; 4.026 ;    ;    ; 4.598 ;
+; habilita   ; abcdefg[0]  ; 4.866 ;    ;    ; 5.481 ;
+; habilita   ; abcdefg[1]  ; 4.172 ;    ;    ; 4.740 ;
+; habilita   ; abcdefg[2]  ; 4.066 ;    ;    ; 4.652 ;
+; habilita   ; abcdefg[3]  ; 4.398 ;    ;    ; 5.018 ;
+; habilita   ; abcdefg[4]  ; 4.256 ;    ;    ; 4.856 ;
+; habilita   ; abcdefg[5]  ; 4.266 ;    ;    ; 4.865 ;
+; habilita   ; abcdefg[6]  ; 4.527 ;    ;    ; 5.083 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -900,13 +900,13 @@ No synchronizer chains to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; habilita   ; abcdefg[0]  ; 3.943 ;    ;    ; 4.508 ;
-; habilita   ; abcdefg[1]  ; 4.110 ;    ;    ; 4.679 ;
-; habilita   ; abcdefg[2]  ; 4.077 ;    ;    ; 4.657 ;
-; habilita   ; abcdefg[3]  ; 4.539 ;    ;    ; 5.113 ;
-; habilita   ; abcdefg[4]  ; 4.069 ;    ;    ; 4.654 ;
-; habilita   ; abcdefg[5]  ; 3.910 ;    ;    ; 4.467 ;
-; habilita   ; abcdefg[6]  ; 3.890 ;    ;    ; 4.456 ;
+; habilita   ; abcdefg[0]  ; 4.720 ;    ;    ; 5.325 ;
+; habilita   ; abcdefg[1]  ; 4.031 ;    ;    ; 4.592 ;
+; habilita   ; abcdefg[2]  ; 3.929 ;    ;    ; 4.506 ;
+; habilita   ; abcdefg[3]  ; 4.101 ;    ;    ; 4.708 ;
+; habilita   ; abcdefg[4]  ; 4.110 ;    ;    ; 4.700 ;
+; habilita   ; abcdefg[5]  ; 4.120 ;    ;    ; 4.711 ;
+; habilita   ; abcdefg[6]  ; 4.393 ;    ;    ; 4.944 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -921,10 +921,10 @@ No synchronizer chains to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.350 ; 0.186 ; -0.905   ; 0.685   ; -3.000              ;
-;  clock           ; -0.350 ; 0.186 ; -0.905   ; 0.685   ; -3.000              ;
-; Design-wide TNS  ; -0.459 ; 0.0   ; -3.62    ; 0.0     ; -7.104              ;
-;  clock           ; -0.459 ; 0.000 ; -3.620   ; 0.000   ; -7.104              ;
+; Worst-case Slack ; -0.349 ; 0.186 ; -0.846   ; 0.665   ; -3.000              ;
+;  clock           ; -0.349 ; 0.186 ; -0.846   ; 0.665   ; -3.000              ;
+; Design-wide TNS  ; -0.387 ; 0.0   ; -3.384   ; 0.0     ; -7.104              ;
+;  clock           ; -0.387 ; 0.000 ; -3.384   ; 0.000   ; -7.104              ;
 +------------------+--------+-------+----------+---------+---------------------+
 
 
@@ -933,7 +933,7 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; habilita  ; clock      ; 2.222 ; 2.672 ; Rise       ; clock           ;
+; habilita  ; clock      ; 2.095 ; 2.584 ; Rise       ; clock           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -942,7 +942,7 @@ No synchronizer chains to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; habilita  ; clock      ; -0.770 ; -1.341 ; Rise       ; clock           ;
+; habilita  ; clock      ; -0.769 ; -1.346 ; Rise       ; clock           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -951,15 +951,15 @@ No synchronizer chains to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; abcdefg[*]  ; clock      ; 8.132 ; 8.046 ; Rise       ; clock           ;
-;  abcdefg[0] ; clock      ; 6.838 ; 6.764 ; Rise       ; clock           ;
-;  abcdefg[1] ; clock      ; 7.242 ; 7.183 ; Rise       ; clock           ;
-;  abcdefg[2] ; clock      ; 6.884 ; 6.701 ; Rise       ; clock           ;
-;  abcdefg[3] ; clock      ; 8.132 ; 8.046 ; Rise       ; clock           ;
-;  abcdefg[4] ; clock      ; 6.789 ; 6.736 ; Rise       ; clock           ;
-;  abcdefg[5] ; clock      ; 6.550 ; 6.441 ; Rise       ; clock           ;
-;  abcdefg[6] ; clock      ; 6.851 ; 6.765 ; Rise       ; clock           ;
-; reset       ; clock      ; 6.401 ; 6.602 ; Rise       ; clock           ;
+; abcdefg[*]  ; clock      ; 8.199 ; 8.175 ; Rise       ; clock           ;
+;  abcdefg[0] ; clock      ; 8.199 ; 8.175 ; Rise       ; clock           ;
+;  abcdefg[1] ; clock      ; 7.716 ; 7.530 ; Rise       ; clock           ;
+;  abcdefg[2] ; clock      ; 6.651 ; 6.572 ; Rise       ; clock           ;
+;  abcdefg[3] ; clock      ; 7.287 ; 7.223 ; Rise       ; clock           ;
+;  abcdefg[4] ; clock      ; 7.100 ; 6.906 ; Rise       ; clock           ;
+;  abcdefg[5] ; clock      ; 7.085 ; 6.951 ; Rise       ; clock           ;
+;  abcdefg[6] ; clock      ; 7.974 ; 8.025 ; Rise       ; clock           ;
+; reset       ; clock      ; 6.135 ; 6.342 ; Rise       ; clock           ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -968,15 +968,15 @@ No synchronizer chains to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; abcdefg[*]  ; clock      ; 3.469 ; 3.465 ; Rise       ; clock           ;
-;  abcdefg[0] ; clock      ; 3.659 ; 3.679 ; Rise       ; clock           ;
-;  abcdefg[1] ; clock      ; 3.878 ; 3.942 ; Rise       ; clock           ;
-;  abcdefg[2] ; clock      ; 3.643 ; 3.662 ; Rise       ; clock           ;
-;  abcdefg[3] ; clock      ; 4.142 ; 4.196 ; Rise       ; clock           ;
-;  abcdefg[4] ; clock      ; 3.643 ; 3.654 ; Rise       ; clock           ;
-;  abcdefg[5] ; clock      ; 3.469 ; 3.465 ; Rise       ; clock           ;
-;  abcdefg[6] ; clock      ; 3.666 ; 3.692 ; Rise       ; clock           ;
-; reset       ; clock      ; 3.514 ; 3.547 ; Rise       ; clock           ;
+; abcdefg[*]  ; clock      ; 3.645 ; 3.589 ; Rise       ; clock           ;
+;  abcdefg[0] ; clock      ; 4.524 ; 4.569 ; Rise       ; clock           ;
+;  abcdefg[1] ; clock      ; 4.065 ; 4.132 ; Rise       ; clock           ;
+;  abcdefg[2] ; clock      ; 3.645 ; 3.589 ; Rise       ; clock           ;
+;  abcdefg[3] ; clock      ; 3.786 ; 3.862 ; Rise       ; clock           ;
+;  abcdefg[4] ; clock      ; 3.765 ; 3.837 ; Rise       ; clock           ;
+;  abcdefg[5] ; clock      ; 3.784 ; 3.794 ; Rise       ; clock           ;
+;  abcdefg[6] ; clock      ; 4.425 ; 4.461 ; Rise       ; clock           ;
+; reset       ; clock      ; 3.441 ; 3.401 ; Rise       ; clock           ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -985,13 +985,13 @@ No synchronizer chains to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; habilita   ; abcdefg[0]  ; 7.046 ;    ;    ; 7.374 ;
-; habilita   ; abcdefg[1]  ; 7.344 ;    ;    ; 7.660 ;
-; habilita   ; abcdefg[2]  ; 7.290 ;    ;    ; 7.590 ;
-; habilita   ; abcdefg[3]  ; 8.538 ;    ;    ; 8.935 ;
-; habilita   ; abcdefg[4]  ; 7.293 ;    ;    ; 7.593 ;
-; habilita   ; abcdefg[5]  ; 6.991 ;    ;    ; 7.304 ;
-; habilita   ; abcdefg[6]  ; 6.944 ;    ;    ; 7.269 ;
+; habilita   ; abcdefg[0]  ; 8.182 ;    ;    ; 8.569 ;
+; habilita   ; abcdefg[1]  ; 7.233 ;    ;    ; 7.504 ;
+; habilita   ; abcdefg[2]  ; 7.026 ;    ;    ; 7.354 ;
+; habilita   ; abcdefg[3]  ; 7.662 ;    ;    ; 8.005 ;
+; habilita   ; abcdefg[4]  ; 7.375 ;    ;    ; 7.705 ;
+; habilita   ; abcdefg[5]  ; 7.396 ;    ;    ; 7.711 ;
+; habilita   ; abcdefg[6]  ; 7.563 ;    ;    ; 7.911 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -1000,13 +1000,13 @@ No synchronizer chains to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; habilita   ; abcdefg[0]  ; 3.943 ;    ;    ; 4.508 ;
-; habilita   ; abcdefg[1]  ; 4.110 ;    ;    ; 4.679 ;
-; habilita   ; abcdefg[2]  ; 4.077 ;    ;    ; 4.657 ;
-; habilita   ; abcdefg[3]  ; 4.539 ;    ;    ; 5.113 ;
-; habilita   ; abcdefg[4]  ; 4.069 ;    ;    ; 4.654 ;
-; habilita   ; abcdefg[5]  ; 3.910 ;    ;    ; 4.467 ;
-; habilita   ; abcdefg[6]  ; 3.890 ;    ;    ; 4.456 ;
+; habilita   ; abcdefg[0]  ; 4.720 ;    ;    ; 5.325 ;
+; habilita   ; abcdefg[1]  ; 4.031 ;    ;    ; 4.592 ;
+; habilita   ; abcdefg[2]  ; 3.929 ;    ;    ; 4.506 ;
+; habilita   ; abcdefg[3]  ; 4.101 ;    ;    ; 4.708 ;
+; habilita   ; abcdefg[4]  ; 4.110 ;    ;    ; 4.700 ;
+; habilita   ; abcdefg[5]  ; 4.120 ;    ;    ; 4.711 ;
+; habilita   ; abcdefg[6]  ; 4.393 ;    ;    ; 4.944 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -1033,6 +1033,10 @@ No synchronizer chains to report.
 +----------------+--------------+-----------------+-----------------+
 ; Pin            ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +----------------+--------------+-----------------+-----------------+
+; Value_set[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Value_set[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Value_set[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Value_set[3]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; reset          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; habilita       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clock          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -1047,13 +1051,13 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; abcdefg[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
-; abcdefg[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00339 V          ; 0.206 V                              ; 0.007 V                              ; 2.77e-10 s                  ; 3.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00339 V         ; 0.206 V                             ; 0.007 V                             ; 2.77e-10 s                 ; 3.24e-10 s                 ; Yes                       ; Yes                       ;
+; abcdefg[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.34 V              ; -0.00668 V          ; 0.218 V                              ; 0.076 V                              ; 1.92e-09 s                  ; 1.81e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.34 V             ; -0.00668 V         ; 0.218 V                             ; 0.076 V                             ; 1.92e-09 s                 ; 1.81e-09 s                 ; No                        ; Yes                       ;
+; abcdefg[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
 ; abcdefg[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
-; abcdefg[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.34 V              ; -0.00668 V          ; 0.218 V                              ; 0.076 V                              ; 1.92e-09 s                  ; 1.81e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.34 V             ; -0.00668 V         ; 0.218 V                             ; 0.076 V                             ; 1.92e-09 s                 ; 1.81e-09 s                 ; No                        ; Yes                       ;
-; abcdefg[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
-; abcdefg[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00339 V          ; 0.206 V                              ; 0.007 V                              ; 2.77e-10 s                  ; 3.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00339 V         ; 0.206 V                             ; 0.007 V                             ; 2.77e-10 s                 ; 3.24e-10 s                 ; Yes                       ; Yes                       ;
-; abcdefg[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; abcdefg[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; abcdefg[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00339 V          ; 0.206 V                              ; 0.007 V                              ; 2.77e-10 s                  ; 3.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00339 V         ; 0.206 V                             ; 0.007 V                             ; 2.77e-10 s                 ; 3.24e-10 s                 ; Yes                       ; Yes                       ;
+; abcdefg[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; abcdefg[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.34 V              ; -0.00668 V          ; 0.218 V                              ; 0.076 V                              ; 1.92e-09 s                  ; 1.81e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.34 V             ; -0.00668 V         ; 0.218 V                             ; 0.076 V                             ; 1.92e-09 s                 ; 1.81e-09 s                 ; No                        ; Yes                       ;
 ; reset         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.76e-09 V                   ; 2.4 V               ; -0.034 V            ; 0.102 V                              ; 0.065 V                              ; 2.49e-10 s                  ; 3.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.76e-09 V                  ; 2.4 V              ; -0.034 V           ; 0.102 V                             ; 0.065 V                             ; 2.49e-10 s                 ; 3.49e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.94e-09 V                   ; 2.39 V              ; -0.0344 V           ; 0.156 V                              ; 0.089 V                              ; 2.68e-10 s                  ; 2.6e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.94e-09 V                  ; 2.39 V             ; -0.0344 V          ; 0.156 V                             ; 0.089 V                             ; 2.68e-10 s                 ; 2.6e-10 s                  ; Yes                       ; Yes                       ;
@@ -1065,13 +1069,13 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; abcdefg[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
-; abcdefg[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.37 V              ; -0.00606 V          ; 0.107 V                              ; 0.021 V                              ; 4.26e-10 s                  ; 4.03e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.37 V             ; -0.00606 V         ; 0.107 V                             ; 0.021 V                             ; 4.26e-10 s                 ; 4.03e-10 s                 ; Yes                       ; Yes                       ;
+; abcdefg[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.33 V              ; -0.00286 V          ; 0.193 V                              ; 0.042 V                              ; 2.32e-09 s                  ; 2.21e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.33 V             ; -0.00286 V         ; 0.193 V                             ; 0.042 V                             ; 2.32e-09 s                 ; 2.21e-09 s                 ; Yes                       ; Yes                       ;
+; abcdefg[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
 ; abcdefg[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
-; abcdefg[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.33 V              ; -0.00286 V          ; 0.193 V                              ; 0.042 V                              ; 2.32e-09 s                  ; 2.21e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.33 V             ; -0.00286 V         ; 0.193 V                             ; 0.042 V                             ; 2.32e-09 s                 ; 2.21e-09 s                 ; Yes                       ; Yes                       ;
-; abcdefg[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
-; abcdefg[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.37 V              ; -0.00606 V          ; 0.107 V                              ; 0.021 V                              ; 4.26e-10 s                  ; 4.03e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.37 V             ; -0.00606 V         ; 0.107 V                             ; 0.021 V                             ; 4.26e-10 s                 ; 4.03e-10 s                 ; Yes                       ; Yes                       ;
-; abcdefg[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; abcdefg[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; abcdefg[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.37 V              ; -0.00606 V          ; 0.107 V                              ; 0.021 V                              ; 4.26e-10 s                  ; 4.03e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.37 V             ; -0.00606 V         ; 0.107 V                             ; 0.021 V                             ; 4.26e-10 s                 ; 4.03e-10 s                 ; Yes                       ; Yes                       ;
+; abcdefg[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; abcdefg[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.33 V              ; -0.00286 V          ; 0.193 V                              ; 0.042 V                              ; 2.32e-09 s                  ; 2.21e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.33 V             ; -0.00286 V         ; 0.193 V                             ; 0.042 V                             ; 2.32e-09 s                 ; 2.21e-09 s                 ; Yes                       ; Yes                       ;
 ; reset         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.93e-07 V                   ; 2.37 V              ; -0.0278 V           ; 0.106 V                              ; 0.115 V                              ; 2.69e-10 s                  ; 4.05e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.93e-07 V                  ; 2.37 V             ; -0.0278 V          ; 0.106 V                             ; 0.115 V                             ; 2.69e-10 s                 ; 4.05e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.76e-07 V                   ; 2.36 V              ; -0.00439 V          ; 0.088 V                              ; 0.007 V                              ; 4.05e-10 s                  ; 3.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.76e-07 V                  ; 2.36 V             ; -0.00439 V         ; 0.088 V                             ; 0.007 V                             ; 4.05e-10 s                 ; 3.35e-10 s                 ; Yes                       ; Yes                       ;
@@ -1083,13 +1087,13 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; abcdefg[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
-; abcdefg[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.73 V              ; -0.0205 V           ; 0.17 V                               ; 0.027 V                              ; 2.58e-10 s                  ; 2.57e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.73 V             ; -0.0205 V          ; 0.17 V                              ; 0.027 V                             ; 2.58e-10 s                 ; 2.57e-10 s                 ; Yes                       ; Yes                       ;
+; abcdefg[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.65 V              ; -0.0115 V           ; 0.219 V                              ; 0.115 V                              ; 1.64e-09 s                  ; 1.57e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.65 V             ; -0.0115 V          ; 0.219 V                             ; 0.115 V                             ; 1.64e-09 s                 ; 1.57e-09 s                 ; No                        ; Yes                       ;
+; abcdefg[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
 ; abcdefg[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
-; abcdefg[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.65 V              ; -0.0115 V           ; 0.219 V                              ; 0.115 V                              ; 1.64e-09 s                  ; 1.57e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.65 V             ; -0.0115 V          ; 0.219 V                             ; 0.115 V                             ; 1.64e-09 s                 ; 1.57e-09 s                 ; No                        ; Yes                       ;
-; abcdefg[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
-; abcdefg[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.73 V              ; -0.0205 V           ; 0.17 V                               ; 0.027 V                              ; 2.58e-10 s                  ; 2.57e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.73 V             ; -0.0205 V          ; 0.17 V                              ; 0.027 V                             ; 2.58e-10 s                 ; 2.57e-10 s                 ; Yes                       ; Yes                       ;
-; abcdefg[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; abcdefg[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; abcdefg[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.73 V              ; -0.0205 V           ; 0.17 V                               ; 0.027 V                              ; 2.58e-10 s                  ; 2.57e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.73 V             ; -0.0205 V          ; 0.17 V                              ; 0.027 V                             ; 2.58e-10 s                 ; 2.57e-10 s                 ; Yes                       ; Yes                       ;
+; abcdefg[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; abcdefg[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.65 V              ; -0.0115 V           ; 0.219 V                              ; 0.115 V                              ; 1.64e-09 s                  ; 1.57e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.65 V             ; -0.0115 V          ; 0.219 V                             ; 0.115 V                             ; 1.64e-09 s                 ; 1.57e-09 s                 ; No                        ; Yes                       ;
 ; reset         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.06e-08 V                   ; 2.86 V              ; -0.0341 V           ; 0.364 V                              ; 0.046 V                              ; 1.17e-10 s                  ; 2.6e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 3.06e-08 V                  ; 2.86 V             ; -0.0341 V          ; 0.364 V                             ; 0.046 V                             ; 1.17e-10 s                 ; 2.6e-10 s                  ; No                        ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.81e-08 V                   ; 2.72 V              ; -0.0542 V           ; 0.144 V                              ; 0.087 V                              ; 2.55e-10 s                  ; 2.14e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.81e-08 V                  ; 2.72 V             ; -0.0542 V          ; 0.144 V                             ; 0.087 V                             ; 2.55e-10 s                 ; 2.14e-10 s                 ; Yes                       ; Yes                       ;
@@ -1168,7 +1172,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Thu May 11 09:19:14 2017
+    Info: Processing started: Fri May 12 07:48:08 2017
 Info: Command: quartus_sta sevensegmentwclockflipflop -c sevensegmentwclockflipflop
 Info: qsta_default_script.tcl version: #3
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1184,22 +1188,22 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.350
+Info (332146): Worst-case setup slack is -0.349
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.350              -0.459 clock 
+    Info (332119):    -0.349              -0.387 clock 
 Info (332146): Worst-case hold slack is 0.355
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.355               0.000 clock 
-Info (332146): Worst-case recovery slack is -0.905
+Info (332146): Worst-case recovery slack is -0.846
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.905              -3.620 clock 
-Info (332146): Worst-case removal slack is 1.228
+    Info (332119):    -0.846              -3.384 clock 
+Info (332146): Worst-case removal slack is 1.203
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.228               0.000 clock 
+    Info (332119):     1.203               0.000 clock 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1210,46 +1214,46 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.204
+Info (332146): Worst-case setup slack is -0.202
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.204              -0.204 clock 
+    Info (332119):    -0.202              -0.202 clock 
 Info (332146): Worst-case hold slack is 0.310
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.310               0.000 clock 
-Info (332146): Worst-case recovery slack is -0.705
+Info (332146): Worst-case recovery slack is -0.652
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.705              -2.820 clock 
-Info (332146): Worst-case removal slack is 1.101
+    Info (332119):    -0.652              -2.608 clock 
+Info (332146): Worst-case removal slack is 1.081
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.101               0.000 clock 
+    Info (332119):     1.081               0.000 clock 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000              -7.000 clock 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 0.240
+Info (332146): Worst-case setup slack is 0.244
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.240               0.000 clock 
+    Info (332119):     0.244               0.000 clock 
 Info (332146): Worst-case hold slack is 0.186
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.186               0.000 clock 
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case recovery slack is -0.078
+Info (332146): Worst-case recovery slack is -0.044
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.078              -0.312 clock 
-Info (332146): Worst-case removal slack is 0.685
+    Info (332119):    -0.044              -0.176 clock 
+Info (332146): Worst-case removal slack is 0.665
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.685               0.000 clock 
+    Info (332119):     0.665               0.000 clock 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1257,8 +1261,8 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 585 megabytes
-    Info: Processing ended: Thu May 11 09:19:17 2017
+    Info: Peak virtual memory: 582 megabytes
+    Info: Processing ended: Fri May 12 07:48:11 2017
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

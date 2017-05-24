@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sevensegmentwclockflipflop
-Thu May 11 09:19:01 2017
+Fri May 12 07:47:53 2017
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -14,14 +14,15 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
   8. Port Connectivity Checks: "sete_segmentos:display|not_1:C1"
-  9. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE4"
- 10. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE3"
- 11. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE2"
- 12. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE1"
- 13. Port Connectivity Checks: "counterFFD:counter"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "zeroAnove:reseter"
+ 10. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE4"
+ 11. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE3"
+ 12. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE2"
+ 13. Port Connectivity Checks: "counterFFD:counter|unidadeContadora:UNIDADE1"
+ 14. Port Connectivity Checks: "counterFFD:counter"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -48,7 +49,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 11 09:19:01 2017      ;
+; Analysis & Synthesis Status        ; Successful - Fri May 12 07:47:53 2017      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; sevensegmentwclockflipflop                 ;
 ; Top-level Entity Name              ; sevensegmentwclockflipflop                 ;
@@ -57,7 +58,7 @@ agreement for further details.
 ;     Total combinational functions  ; 17                                         ;
 ;     Dedicated logic registers      ; 4                                          ;
 ; Total registers                    ; 4                                          ;
-; Total pins                         ; 10                                         ;
+; Total pins                         ; 14                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -181,14 +182,14 @@ agreement for further details.
 +--------------------------+--------------------------------------------------------------------+
 ; Resource                 ; Usage                                                              ;
 +--------------------------+--------------------------------------------------------------------+
-; I/O pins                 ; 10                                                                 ;
+; I/O pins                 ; 14                                                                 ;
 ;                          ;                                                                    ;
 ; DSP block 9-bit elements ; 0                                                                  ;
 ;                          ;                                                                    ;
 ; Maximum fan-out node     ; counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1|Q~reg0 ;
 ; Maximum fan-out          ; 12                                                                 ;
-; Total fan-out            ; 88                                                                 ;
-; Average fan-out          ; 2.10                                                               ;
+; Total fan-out            ; 92                                                                 ;
+; Average fan-out          ; 1.84                                                               ;
 +--------------------------+--------------------------------------------------------------------+
 
 
@@ -197,7 +198,7 @@ agreement for further details.
 +-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Library Name ;
 +-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
-; |sevensegmentwclockflipflop       ; 17 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 10   ; 0            ; |sevensegmentwclockflipflop                                                             ; work         ;
+; |sevensegmentwclockflipflop       ; 17 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 14   ; 0            ; |sevensegmentwclockflipflop                                                             ; work         ;
 ;    |counterFFD:counter|           ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter                                          ; work         ;
 ;       |unidadeContadora:UNIDADE1| ; 1 (1)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE1                ; work         ;
 ;          |FlipFlopD:FFD1|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |sevensegmentwclockflipflop|counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1 ; work         ;
@@ -242,6 +243,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "zeroAnove:reseter"  ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; value_set[3] ; Input ; Info     ; Stuck at VCC ;
+; value_set[2] ; Input ; Info     ; Stuck at GND ;
+; value_set[1] ; Input ; Info     ; Stuck at VCC ;
+; value_set[0] ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
 
 
 +---------------------------------------------------------------------------------------------------------------+
@@ -294,7 +307,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 10                          ;
+; boundary_port         ; 14                          ;
 ; cycloneiii_ff         ; 4                           ;
 ;     CLR               ; 4                           ;
 ; cycloneiii_io_obuf    ; 1                           ;
@@ -324,7 +337,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Thu May 11 09:18:34 2017
+    Info: Processing started: Fri May 12 07:47:25 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sevensegmentwclockflipflop -c sevensegmentwclockflipflop
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sete_segmentos.vhd
@@ -367,11 +380,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file unidade
     Info (12022): Found design unit 1: unidadeContadora-structural
     Info (12023): Found entity 1: unidadeContadora
 Info (12127): Elaborating entity "sevensegmentwclockflipflop" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at sevensegmentwclockflipflop.vhd(29): object "Cout" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at sevensegmentwclockflipflop.vhd(33): object "Cout" assigned a value but never read
 Info (12129): Elaborating entity "counterFFD" using architecture "A:structural" for hierarchy "counterFFD:counter"
 Info (12129): Elaborating entity "unidadeContadora" using architecture "A:structural" for hierarchy "counterFFD:counter|unidadeContadora:UNIDADE1"
 Info (12129): Elaborating entity "FlipFlopD" using architecture "A:structural" for hierarchy "counterFFD:counter|unidadeContadora:UNIDADE1|FlipFlopD:FFD1"
 Info (12129): Elaborating entity "zeroAnove" using architecture "A:structural" for hierarchy "zeroAnove:reseter"
+Warning (10492): VHDL Process Statement warning at zeroAnove.vhd(12): signal "Value_set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12129): Elaborating entity "sete_segmentos" using architecture "A:structural" for hierarchy "sete_segmentos:display"
 Warning (10036): Verilog HDL or VHDL warning at sete_segmentos.vhd(28): object "nA" assigned a value but never read
 Info (12129): Elaborating entity "not_1" using architecture "A:data_flow" for hierarchy "sete_segmentos:display|not_1:C1"
@@ -391,15 +405,20 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 27 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Value_set[0]"
+    Warning (15610): No output dependent on input pin "Value_set[1]"
+    Warning (15610): No output dependent on input pin "Value_set[2]"
+    Warning (15610): No output dependent on input pin "Value_set[3]"
+Info (21057): Implemented 31 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 7 output pins
     Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 17 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 702 megabytes
-    Info: Processing ended: Thu May 11 09:19:01 2017
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 703 megabytes
+    Info: Processing ended: Fri May 12 07:47:53 2017
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:26
 
 

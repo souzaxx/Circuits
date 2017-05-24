@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY MUXDOZE IS
+	PORT( wxyz: 			INOUT	 	std_logic_vector(3 downto 0);
+			wxyz1,wxyz2: 	OUT	 	std_logic_vector(3 downto 0););
+END MUXDOZE;
+
+ARCHITECTURE structural OF MUXDOZE IS
+	BEGIN
+		PROCESS(wxyz) BEGIN
+			IF (wxyz < '1001') THEN
+				wxyz1 <= '0000';
+				wxyz2 <= wxyz;
+			ELSE
+				reset <= '1';
+		END IF;
+	END PROCESS;
+END structural;

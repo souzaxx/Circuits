@@ -1,5 +1,5 @@
 Flow report for sevensegmentwclockflipflop
-Thu May 11 09:19:19 2017
+Fri May 12 07:48:14 2017
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu May 11 09:19:19 2017      ;
+; Flow Status                        ; Successful - Fri May 12 07:48:14 2017      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; sevensegmentwclockflipflop                 ;
 ; Top-level Entity Name              ; sevensegmentwclockflipflop                 ;
@@ -50,7 +50,7 @@ agreement for further details.
 ;     Total combinational functions  ; 17 / 14,400 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 4 / 14,400 ( < 1 % )                       ;
 ; Total registers                    ; 4                                          ;
-; Total pins                         ; 10 / 81 ( 12 % )                           ;
+; Total pins                         ; 14 / 81 ( 17 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 552,960 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -69,7 +69,7 @@ agreement for further details.
 +-------------------+----------------------------+
 ; Option            ; Setting                    ;
 +-------------------+----------------------------+
-; Start date & time ; 05/11/2017 09:18:34        ;
+; Start date & time ; 05/12/2017 07:47:26        ;
 ; Main task         ; Compilation                ;
 ; Revision Name     ; sevensegmentwclockflipflop ;
 +-------------------+----------------------------+
@@ -80,7 +80,7 @@ agreement for further details.
 +-------------------------------------+-----------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                       ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+-----------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 52232140958.149450511400156 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 52232140958.149458604603296 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                        ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)      ; <None>        ; --          ; --             ;
 ; PARTITION_COLOR                     ; 16764057                    ; --            ; --          ; Top            ;
@@ -95,12 +95,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:26     ; 1.0                     ; 702 MB              ; 00:00:25                           ;
-; Fitter                    ; 00:00:07     ; 1.0                     ; 923 MB              ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:28     ; 1.0                     ; 703 MB              ; 00:00:26                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 922 MB              ; 00:00:07                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 604 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 585 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 582 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 573 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:38     ; --                      ; --                  ; 00:00:35                           ;
+; Total                     ; 00:00:40     ; --                      ; --                  ; 00:00:37                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
